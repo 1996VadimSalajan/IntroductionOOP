@@ -6,19 +6,37 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp5
 {
-    abstract class Vehicle
+    public abstract class Vehicle
     {
-        public string name;
+        public string marca;
         public int price;
         public int model;
-        protected Vehicle(string vname, int vprice, int vmodel)
+        public string color;
+        public int speed;
+        public string combustibil;
+        public int gearbox;
+        public double pricecombustibil;
+        protected Vehicle(string vmarca, int vprice, int vmodel, string vcolor, int vspeed, string vcombustibil,int vgearbox,double vpricecombustibil)
         {
-            vname = name;
-            vprice = price;
-            vmodel = model;
+            this.marca = vmarca;
+            this.price = vprice;
+            this.model = vmodel;
+            this.color = vcolor;
+            this.speed = vspeed;
+            this.combustibil = vcombustibil;
+            this.gearbox = vgearbox;
+            this.pricecombustibil = vpricecombustibil;
+
         }
         public abstract void DisplayInfo();
-        
-       
+        public void AddRaiting()
+        {
+            Console.WriteLine("Your Raiting:"); int n = int.Parse(Console.ReadLine());
+        }
+        public virtual void Quanotation()
+        {
+            Console.WriteLine("Vehicle Quanotation: The road will never be the same. True definition of Luxury.Yours Precision crafted performance");
+        }
+        public abstract void CalculateCostsCombustibil();       
     }
 }
