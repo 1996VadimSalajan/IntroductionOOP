@@ -1,0 +1,7 @@
+C:\Users\vadim\source\repos\ConsoleApp5\Visitor\bin\Debug\Visitor.exe.config
+C:\Users\vadim\source\repos\ConsoleApp5\Visitor\bin\Debug\Visitor.exe
+C:\Users\vadim\source\repos\ConsoleApp5\Visitor\bin\Debug\Visitor.pdb
+C:\Users\vadim\source\repos\ConsoleApp5\Visitor\obj\Debug\Visitor.csprojAssemblyReference.cache
+C:\Users\vadim\source\repos\ConsoleApp5\Visitor\obj\Debug\Visitor.csproj.CoreCompileInputs.cache
+C:\Users\vadim\source\repos\ConsoleApp5\Visitor\obj\Debug\Visitor.exe
+C:\Users\vadim\source\repos\ConsoleApp5\Visitor\obj\Debug\Visitor.pdb
