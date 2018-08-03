@@ -1,0 +1,7 @@
+C:\Users\vadim.salajan\source\repos\ConsoleApp8\Multiple Catch\bin\Debug\Multiple Catch.exe.config
+C:\Users\vadim.salajan\source\repos\ConsoleApp8\Multiple Catch\bin\Debug\Multiple Catch.exe
+C:\Users\vadim.salajan\source\repos\ConsoleApp8\Multiple Catch\bin\Debug\Multiple Catch.pdb
+C:\Users\vadim.salajan\source\repos\ConsoleApp8\Multiple Catch\obj\Debug\Multiple Catch.csprojAssemblyReference.cache
+C:\Users\vadim.salajan\source\repos\ConsoleApp8\Multiple Catch\obj\Debug\Multiple Catch.csproj.CoreCompileInputs.cache
+C:\Users\vadim.salajan\source\repos\ConsoleApp8\Multiple Catch\obj\Debug\Multiple Catch.exe
+C:\Users\vadim.salajan\source\repos\ConsoleApp8\Multiple Catch\obj\Debug\Multiple Catch.pdb

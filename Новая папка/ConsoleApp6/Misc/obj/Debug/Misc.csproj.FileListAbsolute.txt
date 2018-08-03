@@ -1,0 +1,6 @@
+C:\Users\vadim.salajan\source\repos\ConsoleApp6\Misc\bin\Debug\Misc.exe.config
+C:\Users\vadim.salajan\source\repos\ConsoleApp6\Misc\bin\Debug\Misc.exe
+C:\Users\vadim.salajan\source\repos\ConsoleApp6\Misc\bin\Debug\Misc.pdb
+C:\Users\vadim.salajan\source\repos\ConsoleApp6\Misc\obj\Debug\Misc.csproj.CoreCompileInputs.cache
+C:\Users\vadim.salajan\source\repos\ConsoleApp6\Misc\obj\Debug\Misc.exe
+C:\Users\vadim.salajan\source\repos\ConsoleApp6\Misc\obj\Debug\Misc.pdb

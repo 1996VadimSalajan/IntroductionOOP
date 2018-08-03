@@ -1,0 +1,7 @@
+C:\Users\vadim.salajan\source\repos\Patternpr\Facade\bin\Debug\Facade.exe.config
+C:\Users\vadim.salajan\source\repos\Patternpr\Facade\bin\Debug\Facade.exe
+C:\Users\vadim.salajan\source\repos\Patternpr\Facade\bin\Debug\Facade.pdb
+C:\Users\vadim.salajan\source\repos\Patternpr\Facade\obj\Debug\Facade.csprojAssemblyReference.cache
+C:\Users\vadim.salajan\source\repos\Patternpr\Facade\obj\Debug\Facade.csproj.CoreCompileInputs.cache
+C:\Users\vadim.salajan\source\repos\Patternpr\Facade\obj\Debug\Facade.exe
+C:\Users\vadim.salajan\source\repos\Patternpr\Facade\obj\Debug\Facade.pdb

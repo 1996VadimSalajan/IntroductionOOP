@@ -1,0 +1,7 @@
+C:\Users\vadim.salajan\source\repos\Singleton\Simple Factory\bin\Debug\Simple Factory.exe.config
+C:\Users\vadim.salajan\source\repos\Singleton\Simple Factory\bin\Debug\Simple Factory.exe
+C:\Users\vadim.salajan\source\repos\Singleton\Simple Factory\bin\Debug\Simple Factory.pdb
+C:\Users\vadim.salajan\source\repos\Singleton\Simple Factory\obj\Debug\Simple Factory.csprojAssemblyReference.cache
+C:\Users\vadim.salajan\source\repos\Singleton\Simple Factory\obj\Debug\Simple Factory.csproj.CoreCompileInputs.cache
+C:\Users\vadim.salajan\source\repos\Singleton\Simple Factory\obj\Debug\Simple Factory.exe
+C:\Users\vadim.salajan\source\repos\Singleton\Simple Factory\obj\Debug\Simple Factory.pdb

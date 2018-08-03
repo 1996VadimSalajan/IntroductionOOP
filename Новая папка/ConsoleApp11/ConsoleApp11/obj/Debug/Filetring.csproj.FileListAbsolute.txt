@@ -1,0 +1,7 @@
+C:\Users\vadim.salajan\source\repos\ConsoleApp11\ConsoleApp11\obj\Debug\Filetring.csprojAssemblyReference.cache
+C:\Users\vadim.salajan\source\repos\ConsoleApp11\ConsoleApp11\obj\Debug\Filetring.csproj.CoreCompileInputs.cache
+C:\Users\vadim.salajan\source\repos\ConsoleApp11\ConsoleApp11\bin\Debug\ConsoleApp11.exe.config
+C:\Users\vadim.salajan\source\repos\ConsoleApp11\ConsoleApp11\bin\Debug\ConsoleApp11.exe
+C:\Users\vadim.salajan\source\repos\ConsoleApp11\ConsoleApp11\bin\Debug\ConsoleApp11.pdb
+C:\Users\vadim.salajan\source\repos\ConsoleApp11\ConsoleApp11\obj\Debug\ConsoleApp11.exe
+C:\Users\vadim.salajan\source\repos\ConsoleApp11\ConsoleApp11\obj\Debug\ConsoleApp11.pdb

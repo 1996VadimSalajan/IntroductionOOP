@@ -1,0 +1,7 @@
+C:\Users\vadim.salajan\source\repos\ConsoleApp12\directoryinfo\bin\Debug\directoryinfo.exe.config
+C:\Users\vadim.salajan\source\repos\ConsoleApp12\directoryinfo\bin\Debug\directoryinfo.exe
+C:\Users\vadim.salajan\source\repos\ConsoleApp12\directoryinfo\bin\Debug\directoryinfo.pdb
+C:\Users\vadim.salajan\source\repos\ConsoleApp12\directoryinfo\obj\Debug\directoryinfo.csprojAssemblyReference.cache
+C:\Users\vadim.salajan\source\repos\ConsoleApp12\directoryinfo\obj\Debug\directoryinfo.csproj.CoreCompileInputs.cache
+C:\Users\vadim.salajan\source\repos\ConsoleApp12\directoryinfo\obj\Debug\directoryinfo.exe
+C:\Users\vadim.salajan\source\repos\ConsoleApp12\directoryinfo\obj\Debug\directoryinfo.pdb

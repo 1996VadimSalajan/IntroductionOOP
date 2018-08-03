@@ -1,0 +1,7 @@
+C:\Users\vadim.salajan\source\repos\ConsoleApp7\IComparer\bin\Debug\IComparer.exe.config
+C:\Users\vadim.salajan\source\repos\ConsoleApp7\IComparer\bin\Debug\IComparer.exe
+C:\Users\vadim.salajan\source\repos\ConsoleApp7\IComparer\bin\Debug\IComparer.pdb
+C:\Users\vadim.salajan\source\repos\ConsoleApp7\IComparer\obj\Debug\IComparer.csprojAssemblyReference.cache
+C:\Users\vadim.salajan\source\repos\ConsoleApp7\IComparer\obj\Debug\IComparer.csproj.CoreCompileInputs.cache
+C:\Users\vadim.salajan\source\repos\ConsoleApp7\IComparer\obj\Debug\IComparer.exe
+C:\Users\vadim.salajan\source\repos\ConsoleApp7\IComparer\obj\Debug\IComparer.pdb

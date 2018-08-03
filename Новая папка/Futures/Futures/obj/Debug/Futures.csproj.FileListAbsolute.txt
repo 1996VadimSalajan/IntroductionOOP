@@ -1,0 +1,10 @@
+C:\Users\vadim.salajan\source\repos\Futures\Futures\bin\Debug\Futures.exe.config
+C:\Users\vadim.salajan\source\repos\Futures\Futures\bin\Debug\Futures.exe
+C:\Users\vadim.salajan\source\repos\Futures\Futures\bin\Debug\Futures.pdb
+C:\Users\vadim.salajan\source\repos\Futures\Futures\obj\Debug\Futures.csprojAssemblyReference.cache
+C:\Users\vadim.salajan\source\repos\Futures\Futures\obj\Debug\Futures.csproj.CoreCompileInputs.cache
+C:\Users\vadim.salajan\source\repos\Futures\Futures\obj\Debug\Futures.exe
+C:\Users\vadim.salajan\source\repos\Futures\Futures\obj\Debug\Futures.pdb
+C:\Users\vadim.salajan\source\repos\Futures\Futures\bin\Debug\System.ValueTuple.dll
+C:\Users\vadim.salajan\source\repos\Futures\Futures\bin\Debug\System.ValueTuple.xml
+C:\Users\vadim.salajan\source\repos\Futures\Futures\obj\Debug\Futures.csproj.CopyComplete

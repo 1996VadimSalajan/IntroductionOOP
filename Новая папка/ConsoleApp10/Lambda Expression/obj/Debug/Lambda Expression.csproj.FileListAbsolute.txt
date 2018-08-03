@@ -1,0 +1,6 @@
+C:\Users\vadim.salajan\source\repos\ConsoleApp10\Lambda Expression\bin\Debug\Lambda Expression.exe.config
+C:\Users\vadim.salajan\source\repos\ConsoleApp10\Lambda Expression\bin\Debug\Lambda Expression.exe
+C:\Users\vadim.salajan\source\repos\ConsoleApp10\Lambda Expression\bin\Debug\Lambda Expression.pdb
+C:\Users\vadim.salajan\source\repos\ConsoleApp10\Lambda Expression\obj\Debug\Lambda Expression.csproj.CoreCompileInputs.cache
+C:\Users\vadim.salajan\source\repos\ConsoleApp10\Lambda Expression\obj\Debug\Lambda Expression.exe
+C:\Users\vadim.salajan\source\repos\ConsoleApp10\Lambda Expression\obj\Debug\Lambda Expression.pdb

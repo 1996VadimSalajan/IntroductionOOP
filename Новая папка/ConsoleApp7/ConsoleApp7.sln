@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Overloading Operator", "ConsoleApp7\Overloading Operator.csproj", "{60CA065E-A8F7-4422-AD26-F94178A6ADB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IComparer", "IComparer\IComparer.csproj", "{328BE85F-441D-4D36-BDA4-E025ED931DC3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{60CA065E-A8F7-4422-AD26-F94178A6ADB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60CA065E-A8F7-4422-AD26-F94178A6ADB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60CA065E-A8F7-4422-AD26-F94178A6ADB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60CA065E-A8F7-4422-AD26-F94178A6ADB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{328BE85F-441D-4D36-BDA4-E025ED931DC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{328BE85F-441D-4D36-BDA4-E025ED931DC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{328BE85F-441D-4D36-BDA4-E025ED931DC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{328BE85F-441D-4D36-BDA4-E025ED931DC3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D95AB986-25F1-4DFF-A8E9-A00D6741CA41}
+	EndGlobalSection
+EndGlobal

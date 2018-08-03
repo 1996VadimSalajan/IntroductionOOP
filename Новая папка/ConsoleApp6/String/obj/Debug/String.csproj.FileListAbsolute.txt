@@ -1,0 +1,7 @@
+C:\Users\vadim.salajan\source\repos\ConsoleApp6\String\bin\Debug\String.exe.config
+C:\Users\vadim.salajan\source\repos\ConsoleApp6\String\bin\Debug\String.exe
+C:\Users\vadim.salajan\source\repos\ConsoleApp6\String\bin\Debug\String.pdb
+C:\Users\vadim.salajan\source\repos\ConsoleApp6\String\obj\Debug\String.csproj.CoreCompileInputs.cache
+C:\Users\vadim.salajan\source\repos\ConsoleApp6\String\obj\Debug\String.exe
+C:\Users\vadim.salajan\source\repos\ConsoleApp6\String\obj\Debug\String.pdb
+C:\Users\vadim.salajan\source\repos\ConsoleApp6\String\obj\Debug\String.csprojAssemblyReference.cache

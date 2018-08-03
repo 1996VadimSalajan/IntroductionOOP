@@ -1,0 +1,7 @@
+C:\Users\vadim.salajan\source\repos\ConsoleApp9\ArrayGeneric\obj\Debug\ArrayGeneric.csprojAssemblyReference.cache
+C:\Users\vadim.salajan\source\repos\ConsoleApp9\ArrayGeneric\obj\Debug\ArrayGeneric.csproj.CoreCompileInputs.cache
+C:\Users\vadim.salajan\source\repos\ConsoleApp9\ArrayGeneric\bin\Debug\ArrayGeneric.exe.config
+C:\Users\vadim.salajan\source\repos\ConsoleApp9\ArrayGeneric\bin\Debug\ArrayGeneric.exe
+C:\Users\vadim.salajan\source\repos\ConsoleApp9\ArrayGeneric\bin\Debug\ArrayGeneric.pdb
+C:\Users\vadim.salajan\source\repos\ConsoleApp9\ArrayGeneric\obj\Debug\ArrayGeneric.exe
+C:\Users\vadim.salajan\source\repos\ConsoleApp9\ArrayGeneric\obj\Debug\ArrayGeneric.pdb

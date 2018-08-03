@@ -1,0 +1,7 @@
+C:\Users\vadim.salajan\source\repos\ConsoleApp9\ConsoleApp9\bin\Debug\ConsoleApp9.exe.config
+C:\Users\vadim.salajan\source\repos\ConsoleApp9\ConsoleApp9\bin\Debug\ConsoleApp9.exe
+C:\Users\vadim.salajan\source\repos\ConsoleApp9\ConsoleApp9\bin\Debug\ConsoleApp9.pdb
+C:\Users\vadim.salajan\source\repos\ConsoleApp9\ConsoleApp9\obj\Debug\ConsoleApp9.csprojAssemblyReference.cache
+C:\Users\vadim.salajan\source\repos\ConsoleApp9\ConsoleApp9\obj\Debug\ConsoleApp9.csproj.CoreCompileInputs.cache
+C:\Users\vadim.salajan\source\repos\ConsoleApp9\ConsoleApp9\obj\Debug\ConsoleApp9.exe
+C:\Users\vadim.salajan\source\repos\ConsoleApp9\ConsoleApp9\obj\Debug\ConsoleApp9.pdb
