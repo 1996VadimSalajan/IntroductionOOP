@@ -9,21 +9,18 @@ namespace Inc
 {
     class Program
     {
-        public static IServiceProvider IServiceCollection { get; set; }
+        public static IServiceProvider IServiceProvider { get; set; }
 
         static void Main(string[] args)
         {     
-            IRepository<Book> book = new Repository<Book>();
-            Book b1 = new Book() { NameBook = "Doctor House", AgeBook = 234 };
-            book.Add(b1);
             var a = new ServiceCollection();
             a.AddTransient<IBook,Book>();
             a.AddTransient<IPerson,Person>();
             a.AddTransient<IRepository<Book>, Repository<Book>>();
             a.AddTransient<IRepository<Person>, Repository<Person>>();
             a.AddTransient<Controller>();
-            Program.IServiceCollection = a.BuildServiceProvider();
-            var controller =IServiceCollection.GetService<Controller>();  
+            Program.IServiceProvider = a.BuildServiceProvider();
+            var controller =IServiceProvider.GetService<Controller>();  
             Console.ReadKey();
         }
     }

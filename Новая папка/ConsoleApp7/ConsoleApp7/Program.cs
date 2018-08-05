@@ -17,31 +17,23 @@ namespace ConsoleApp7
         static void Main(string[] args)
         {      
             Angle geo1 = new Angle();
-            geo1.setSeconds(173);
-            geo1.setMinute(45);
-            geo1.setHour(4);
+            geo1.seconds=173;
+            geo1.minute=45;
+            geo1.hour=(4);
             Angle geo2 = new Angle();
-            geo2.setSeconds(23);
-            geo2.setMinute(45);
-            geo2.setHour(3);
+            geo2.seconds=(23);
+            geo2.minute=(45);
+            geo2.hour=(3);
             Angle geo3 = new Angle();
-            geo3 = geo1 + geo2;
-            secondsSum = geo3.ResultatSeconds();
-            minuteSum = geo3.ResultatMinutes();
-            hourSum = geo3.ResultatHour();
+            if (geo1 >= geo2) Console.WriteLine("ok");
+            secondsSum = geo3.seconds;
+            minuteSum = geo3.minute;
+            hourSum = geo3.hour;
 
             CalculateDegrees();
 
             Console.WriteLine("Resultat final pentru Sum :"+hourfinal+"  degrees  "+minfinal+"'' "+secondfinal+"' ");
-            geo3 = geo1 - geo2;
-            secondsSum = geo3.ResultatSeconds();
-            minuteSum = geo3.ResultatMinutes();
-            hourSum = geo3.ResultatHour();
-
-            CalculateDegrees();
-
-            Console.WriteLine("Resultat final pentru Difference :" + hourfinal + "  degrees  " + minfinal + "'' " + secondfinal + "' ");
-
+          
             Angle obiect = new Angle();
 
             for (int i = 1; i <= 25; i++)

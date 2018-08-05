@@ -11,7 +11,7 @@ namespace ArrayGeneric
         private T[] Array;
         public ArrayGeneric(int size)
         {
-            Array = new T[size + 1];
+            Array = new T[size + 1]; 
         }
         public T GetItem(int index)
         {

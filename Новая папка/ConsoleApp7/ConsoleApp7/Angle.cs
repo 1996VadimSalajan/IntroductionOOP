@@ -7,57 +7,34 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp7
 {
-    class Angle : IEnumerable
+    class Angle
     {
-       private int hour, minute, seconds,resultat;
+        //public int hour, minute, seconds, resultat;
         public static List<Angle> a;
 
 
-        static Angle()
-        {
-            a = new List<Angle>();
-        }
+       public int hour{get;set;}
+        public int seconds { get; set; }
+        public int minute { get; set; }
 
-        public int ResultatSeconds()
-        {   
-            return seconds;
-        }
-        public int ResultatMinutes()
-        {
-            return minute;
-        }
-        public int ResultatHour()
-        {
-            return hour;
-        }
-        public void setSeconds(int sec)
-        {
-            seconds = sec;
-        }
-        public void setMinute(int min)
-        {
-            minute = min;
-        }
-        public void setHour(int h)
-        {
-            hour= h;
-        }
-
-        public static Angle operator +(Angle a, Angle b)
+        public static bool operator>= (Angle a, Angle b)
         {
             Angle geo = new Angle();
-            geo.seconds = a.seconds + b.seconds;
-            geo.minute = a.minute + b.minute;
-            geo.hour = a.hour + b.hour;
-            return geo;
+            if (a.seconds > b.seconds)
+                // geo.minute = a.minute + b.minute;
+                // geo.hour = a.hour + b.hour;
+                return true;
+            else return false;
         }
-        public static Angle operator -(Angle a, Angle b)
+        public static bool operator<=(Angle a, Angle b)
         {
-            Angle geo = new Angle();
-            geo.seconds = a.seconds - b.seconds;
-            geo.minute = a.minute - b.minute;
-            geo.hour = a.hour - b.hour;
-            return geo;
+           // Angle geo = new Angle();
+           // geo.seconds = a.seconds - b.seconds;
+            // geo.minute = a.minute - b.minute;
+            // geo.hour = a.hour - b.hour;
+            if (a.seconds > b.seconds)
+                return true;
+            else return false;
         }
 
         private string[] tablouPrivat = new string[30];

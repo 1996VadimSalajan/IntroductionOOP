@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace IComparer
 {
-    class Car : IComparable
+    class Car //: IComparable
     {
         public int Speed
         {
@@ -14,14 +14,14 @@ namespace IComparer
             set;
 
         }
-        public int CompareTo(object obj)
-        {
-            if(!(obj is Car))
-            {
-                throw new ArgumentException("Compared object not is Car.");
-            }
-            Car car = obj as Car;
-            return Speed.CompareTo(car.Speed);
-        }
+        //public int CompareTo(object obj) 
+        //{
+        //    if(!(obj is Car))
+        //    {
+        //        throw new ArgumentException("Compared object not is Car.");
+        //    }
+        //    Car car = obj as Car;
+        //    return Speed.CompareTo(car.Speed);
+        //}
     }
 }

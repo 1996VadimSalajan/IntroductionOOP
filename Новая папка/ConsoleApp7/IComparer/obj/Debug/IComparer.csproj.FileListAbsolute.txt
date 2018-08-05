@@ -5,3 +5,10 @@ C:\Users\vadim.salajan\source\repos\ConsoleApp7\IComparer\obj\Debug\IComparer.cs
 C:\Users\vadim.salajan\source\repos\ConsoleApp7\IComparer\obj\Debug\IComparer.csproj.CoreCompileInputs.cache
 C:\Users\vadim.salajan\source\repos\ConsoleApp7\IComparer\obj\Debug\IComparer.exe
 C:\Users\vadim.salajan\source\repos\ConsoleApp7\IComparer\obj\Debug\IComparer.pdb
+D:\IntroductionOOP\Новая папка\ConsoleApp7\IComparer\bin\Debug\IComparer.exe.config
+D:\IntroductionOOP\Новая папка\ConsoleApp7\IComparer\bin\Debug\IComparer.exe
+D:\IntroductionOOP\Новая папка\ConsoleApp7\IComparer\bin\Debug\IComparer.pdb
+D:\IntroductionOOP\Новая папка\ConsoleApp7\IComparer\obj\Debug\IComparer.csprojAssemblyReference.cache
+D:\IntroductionOOP\Новая папка\ConsoleApp7\IComparer\obj\Debug\IComparer.csproj.CoreCompileInputs.cache
+D:\IntroductionOOP\Новая папка\ConsoleApp7\IComparer\obj\Debug\IComparer.exe
+D:\IntroductionOOP\Новая папка\ConsoleApp7\IComparer\obj\Debug\IComparer.pdb

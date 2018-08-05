@@ -10,16 +10,18 @@ namespace Inc
     {
         private readonly IBook _book;
         private readonly IPerson _person;
-      
-
         public Controller(IBook book,IPerson person)
         {
             _book = book;
             _person = person;
         }
-        public static void Add()
+        public void StartGetNumberBook()
         {
-          
+            _book.GetNumberBook(232);
+        }
+        public void GetTimeOfDayWork()
+        {
+            _person.GetTimeOfDayWork (DateTime.Now);
         }
     }
 }

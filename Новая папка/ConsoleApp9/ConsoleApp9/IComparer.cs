@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp9
 {
-    interface IComparer<in T>
+    interface IComparer<T>
     {
         int Compare(T x, T y);
     }

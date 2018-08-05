@@ -5,3 +5,10 @@ C:\Users\vadim.salajan\source\repos\ConsoleApp8\ConsoleApp1\obj\Debug\Custom.csp
 C:\Users\vadim.salajan\source\repos\ConsoleApp8\ConsoleApp1\obj\Debug\ConsoleApp1.exe
 C:\Users\vadim.salajan\source\repos\ConsoleApp8\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
 C:\Users\vadim.salajan\source\repos\ConsoleApp8\ConsoleApp1\obj\Debug\Custom.csprojAssemblyReference.cache
+D:\IntroductionOOP\Новая папка\ConsoleApp8\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+D:\IntroductionOOP\Новая папка\ConsoleApp8\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+D:\IntroductionOOP\Новая папка\ConsoleApp8\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+D:\IntroductionOOP\Новая папка\ConsoleApp8\ConsoleApp1\obj\Debug\Custom.csprojAssemblyReference.cache
+D:\IntroductionOOP\Новая папка\ConsoleApp8\ConsoleApp1\obj\Debug\Custom.csproj.CoreCompileInputs.cache
+D:\IntroductionOOP\Новая папка\ConsoleApp8\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+D:\IntroductionOOP\Новая папка\ConsoleApp8\ConsoleApp1\obj\Debug\ConsoleApp1.pdb

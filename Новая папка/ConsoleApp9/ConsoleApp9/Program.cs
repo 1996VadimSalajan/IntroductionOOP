@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,10 +19,28 @@ namespace ConsoleApp9
 
             IEnumerables<Animal> enumerables3 = new MyEnumerables<Dog>();
 
-            List<>
+            List<int> a = new List<int>(3);
+            ArrayList b = new ArrayList(3);
+            Dictionary<int,int> c = new Dictionary<int,int>();
+            c.Add(1, 1);
+            c.Add(2, 2);
+          
+            b.Add("2");
+            b.Add(1);
+            b.Remove("2");
+            a.Add(5);
+            a.Add(2);
+            a.Add(5);
+            a.Insert(2, 7);
+            a.Remove(5);
+           
+            //a.Reverse();
+            //a.Sort();
+            foreach (var item in c)
+                if(item.Key==2)
+                Console.WriteLine(item);
 
-
-            ProcessBook();
+          //  ProcessBook();
             Console.ReadKey();
 
         }
@@ -44,19 +63,19 @@ namespace ConsoleApp9
             switch (value)
             {
                 case Books.History:
-                    foreach (var item in listhistory.List)
+                    foreach (var item in listhistory.GetList)
                         Console.WriteLine(item.Name);
                     break;
                 case Books.Detective:
-                    foreach (var anotheritem in listdetective.List)
+                    foreach (var anotheritem in listdetective.GetList)
                         Console.WriteLine(anotheritem.Name);
                     break;
                 case Books.Romanian:
-                    foreach (var anotheritem in listromanian.List)
+                    foreach (var anotheritem in listromanian.GetList)
                         Console.WriteLine(anotheritem.Name);
                     break;
                 case Books.Drama:
-                    foreach (var anotheritem in listdrama.List)
+                    foreach (var anotheritem in listdrama.GetList)
                         Console.WriteLine(anotheritem.Name);
                     break;
             }
@@ -65,7 +84,7 @@ namespace ConsoleApp9
             listcompare.Add(a2);
             listcompare.Add(a3);
             listcompare.Add(a4);
-            var authorDifferents = listcompare.List.Distinct(new AuthorEqualityComparer());
+            var authorDifferents = listcompare.GetList.Distinct(new AuthorEqualityComparer());
             Console.WriteLine(authorDifferents.Count());
             ComparerAgeBook age = new ComparerAgeBook();
             var comparerAgeBook = age.Compare(a1, a2);

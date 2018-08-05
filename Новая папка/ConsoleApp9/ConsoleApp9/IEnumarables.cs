@@ -30,7 +30,7 @@ namespace ConsoleApp9
 
     public interface IEnumerator<in T>
     {
-        T Current { get; }
+        int Current { get; }
         bool MoveNext();
     }
 }

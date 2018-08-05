@@ -22,6 +22,7 @@ namespace ConsoleApp6
                     n=j;
                 }
             }
+            Array.Resize(ref number, number.Length - n);
             for (i = 0; i <n; i++)
             {
                     Console.Write(number[i] + " ");

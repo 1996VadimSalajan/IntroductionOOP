@@ -19,3 +19,4 @@ namespace ConsoleApp9
             return obj.Author.GetHashCode();
         }
     }
+}

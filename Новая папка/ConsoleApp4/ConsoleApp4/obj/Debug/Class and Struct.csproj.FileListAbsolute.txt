@@ -1,0 +1,7 @@
+D:\IntroductionOOP\Новая папка\ConsoleApp4\ConsoleApp4\bin\Debug\ConsoleApp4.exe.config
+D:\IntroductionOOP\Новая папка\ConsoleApp4\ConsoleApp4\bin\Debug\ConsoleApp4.exe
+D:\IntroductionOOP\Новая папка\ConsoleApp4\ConsoleApp4\bin\Debug\ConsoleApp4.pdb
+D:\IntroductionOOP\Новая папка\ConsoleApp4\ConsoleApp4\obj\Debug\Class and Struct.csprojAssemblyReference.cache
+D:\IntroductionOOP\Новая папка\ConsoleApp4\ConsoleApp4\obj\Debug\Class and Struct.csproj.CoreCompileInputs.cache
+D:\IntroductionOOP\Новая папка\ConsoleApp4\ConsoleApp4\obj\Debug\ConsoleApp4.exe
+D:\IntroductionOOP\Новая папка\ConsoleApp4\ConsoleApp4\obj\Debug\ConsoleApp4.pdb

@@ -28,14 +28,14 @@ namespace IComparer
                   Speed=100
               }
             };
-            Array.Sort(cars);
+           
+            //Array.ForEach(cars, x => Console.WriteLine(x.Speed));
+            var car = new CarComparer();
+            Array.Sort(cars,car);
             Array.ForEach(cars, x => Console.WriteLine(x.Speed));
             Console.ReadKey();
 
-            var v1 = new Car();
-            var v2 = new Car();
-
-            v1.CompareTo(v2);
+          
         }       
      }
    

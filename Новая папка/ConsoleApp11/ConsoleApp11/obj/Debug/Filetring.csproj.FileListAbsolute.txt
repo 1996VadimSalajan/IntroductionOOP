@@ -5,3 +5,10 @@ C:\Users\vadim.salajan\source\repos\ConsoleApp11\ConsoleApp11\bin\Debug\ConsoleA
 C:\Users\vadim.salajan\source\repos\ConsoleApp11\ConsoleApp11\bin\Debug\ConsoleApp11.pdb
 C:\Users\vadim.salajan\source\repos\ConsoleApp11\ConsoleApp11\obj\Debug\ConsoleApp11.exe
 C:\Users\vadim.salajan\source\repos\ConsoleApp11\ConsoleApp11\obj\Debug\ConsoleApp11.pdb
+D:\IntroductionOOP\Новая папка\ConsoleApp11\ConsoleApp11\bin\Debug\ConsoleApp11.exe.config
+D:\IntroductionOOP\Новая папка\ConsoleApp11\ConsoleApp11\bin\Debug\ConsoleApp11.exe
+D:\IntroductionOOP\Новая папка\ConsoleApp11\ConsoleApp11\bin\Debug\ConsoleApp11.pdb
+D:\IntroductionOOP\Новая папка\ConsoleApp11\ConsoleApp11\obj\Debug\Filetring.csprojAssemblyReference.cache
+D:\IntroductionOOP\Новая папка\ConsoleApp11\ConsoleApp11\obj\Debug\Filetring.csproj.CoreCompileInputs.cache
+D:\IntroductionOOP\Новая папка\ConsoleApp11\ConsoleApp11\obj\Debug\ConsoleApp11.exe
+D:\IntroductionOOP\Новая папка\ConsoleApp11\ConsoleApp11\obj\Debug\ConsoleApp11.pdb

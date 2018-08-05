@@ -15,7 +15,7 @@ namespace ConsoleApp1
             {
                 if (test.Length < 10)
                     throw new Exception("Not ten characters!");
-                if (test.Contains("_"))
+                if (!test.Contains("_"))
                     throw new Exception("Not allowed character _ !");
                 Console.WriteLine(test);
             }

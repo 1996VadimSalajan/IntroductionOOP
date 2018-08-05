@@ -25,12 +25,14 @@ namespace ConsoleApp11
 
             List<Person> student = new List<Person> {p1,p2,p3,p4};
             List<Library> book = new List<Library> { l1, l2,l3,l4 };
-
+            var query = student.Min(x=>x.Name);
+            query.ToList().ForEach(m=>Console.WriteLine(m));
+            
             Console.WriteLine("\n Query1:");
             var query1 = from s in student
-                         where s.Age > 20
+                         where s.Age > 20 
                          select new { Name = s.Name, Surname = s.Surname, Age = s.Age };
-            query1.ToList().ForEach(s => Console.WriteLine(s.Name + " " + s.Surname + " " + s.Age+""));
+            query1.ToList().ForEach(s => Console.WriteLine(s.Name + " " + s.Surname + " " + s.Age + ""));
             Console.WriteLine();
 
             Console.WriteLine("\n Query2:");
@@ -52,12 +54,12 @@ namespace ConsoleApp11
             Console.WriteLine("\n Query6:");
             var query6 = student.Distinct().ToList();
             query6.ToList().ForEach(s => Console.WriteLine(s.Name + " " + s.Surname + " " + s.Age));
-  
+
             Console.WriteLine("\n Query7:");
             var query7 = from s in student
                          join n in book on s.IdPerson equals n.IdPerson
-                         select new { Name = s.Name, Surname = s.Surname, Age = s.Age,n.NameBook };
-            query7.ToList().ForEach(s => Console.WriteLine(s.Name + " " + s.Surname + " " + s.Age+" "+s.NameBook));
+                         select new { Name = s.Name, Surname = s.Surname, Age = s.Age, n.NameBook };
+            query7.ToList().ForEach(s => Console.WriteLine(s.Name + " " + s.Surname + " " + s.Age + " " + s.NameBook));
 
             Console.WriteLine("\n Query8:");
             var query8 = student.GroupJoin(book,
@@ -87,14 +89,15 @@ namespace ConsoleApp11
 
             Console.WriteLine("\n Query10:");
             var query10 = from s in student
-                          orderby s.Name,s.Surname descending
+                          orderby s.Name, s.Surname descending
                           select s;
-            query10.ToList().ForEach(s => Console.WriteLine(s.Name+" "+s.Surname));
+            query10.ToList().ForEach(s => Console.WriteLine(s.Name + " " + s.Surname));
 
             Console.WriteLine("\n Query11:");
 
-            string[] capitals = { "Sofia", "Paris", "London", "Moscow", "Helsinki" };
-
+            string[] capitals = { "aSofi", "aParis", "London", "Moscow", "Helsinki" };
+            var query111 = capitals.SequenceEqual(capitals);
+            Console.WriteLine(query111);
             var query11 = capitals.OrderByDescending(s => s.Length).ThenByDescending(s => s);
             query11.ToList().ForEach(s => Console.WriteLine(s));
 
@@ -113,10 +116,10 @@ namespace ConsoleApp11
                           };
             foreach (var item in query13)
             {
-                Console.WriteLine("Student have "+item.Age+" years");
+                Console.WriteLine("Student have " + item.Age + " years");
                 foreach (string name in item.Name)
                 {
-                         Console.WriteLine(name);
+                    Console.WriteLine(name);
                 }
             }
 
@@ -126,10 +129,10 @@ namespace ConsoleApp11
             var c1 = (a).Concat(b);
             var c2 = a.Except(b);
             var c3 = a.Intersect(b);
-     
+
             Console.WriteLine("\n Concatenarea: ");
             c1.ToList().ForEach(s => Console.Write(s));
-          
+
 
             Console.WriteLine("\n Except: ");
             c2.ToList().ForEach(s => Console.Write(s));
@@ -140,13 +143,13 @@ namespace ConsoleApp11
             Console.WriteLine("\n");
 
             Console.WriteLine("\n First Student: ");
-            Console.WriteLine(c4.Name+" "+c4.Surname);
+            Console.WriteLine(c4.Name + " " + c4.Surname);
             var c5 = student.Last();
             Console.WriteLine("\n");
 
             Console.WriteLine("\n Last student: ");
             Console.WriteLine(c5.Name + " " + c5.Surname);
-            var c6 = student.Count(x=>x.Age>19);
+            var c6 = student.Count(x => x.Age > 19);
             Console.WriteLine();
 
             Console.WriteLine("\n Number students: ");
@@ -155,14 +158,14 @@ namespace ConsoleApp11
             var c8 = a.Average();
             var c9 = a.Min();
             var c10 = a.Aggregate((s, n) => s * n);
-            Console.WriteLine("Sum: "+c7+" Average: "+c8+" Min: "+c9+" Aggregate "+c10);
+            Console.WriteLine("Sum: " + c7 + " Average: " + c8 + " Min: " + c9 + " Aggregate " + c10);
 
-            var c11 = student.Any(s => s.Age == 43);
-            Console.WriteLine("\n Exist student who 43 years: "+c11);
+            var c11 = student.All(s => s.Age == 43);
+            Console.WriteLine("\n Exist student who 43 years: " + c11);
 
             var c12 = Enumerable.Range(2, 9);
-            foreach(var item in c12)
-            Console.Write(item+"  ");
+            foreach (var item in c12)
+                Console.Write(item + "  ");
 
             Console.WriteLine();
             var c13 = Enumerable.Repeat(p1.Name, 9);

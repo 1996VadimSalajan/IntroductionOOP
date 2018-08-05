@@ -8,14 +8,13 @@ namespace Inc
 {
     class Book : IBook
     {
-       
-       public string NameBook { get; set; }
-       public int AgeBook { get; set; }
-        public object Name { get; internal set; }
 
-        public Book()
+        public string NameBook { get; set; }
+        public int AgeBook { get; set; }
+        public object Name { get; internal set; }
+        public int GetNumberBook(int number)
         {
-           
+            return number;
         }
     }
 }

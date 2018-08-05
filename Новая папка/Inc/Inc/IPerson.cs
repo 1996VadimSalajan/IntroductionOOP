@@ -8,5 +8,6 @@ namespace Inc
 {
     interface IPerson
     {
+        string GetTimeOfDayWork (DateTime time);
     }
 }
