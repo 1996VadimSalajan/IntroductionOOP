@@ -8,7 +8,7 @@ namespace ConsoleApp5
 {
     class User:IUser
     {
-        private string _name;
+        private readonly string _name;
 
         public User(string name)
         {
@@ -19,5 +19,6 @@ namespace ConsoleApp5
             Console.WriteLine("Notified {0}, Company {1} has new model car {2} at price {3:C}", _name, stock.Symbol,stock.Model, stock.Price);
         }
         public Stock Stock {get; set; }
+
     }
 }

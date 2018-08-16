@@ -62,8 +62,6 @@
   <ItemGroup>
     <Compile Include="Book.cs" />
     <Compile Include="Controller.cs" />
-    <Compile Include="IBook.cs" />
-    <Compile Include="IPerson.cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />

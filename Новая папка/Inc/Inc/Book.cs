@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace Inc
 {
-    class Book : IBook
+    class Book
     {
-
         public string NameBook { get; set; }
         public int AgeBook { get; set; }
         public object Name { get; internal set; }

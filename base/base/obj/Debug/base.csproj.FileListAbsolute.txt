@@ -1,0 +1,7 @@
+C:\Users\vadim.salajan\source\repos\base\base\bin\Debug\@base.exe.config
+C:\Users\vadim.salajan\source\repos\base\base\bin\Debug\@base.exe
+C:\Users\vadim.salajan\source\repos\base\base\bin\Debug\@base.pdb
+C:\Users\vadim.salajan\source\repos\base\base\obj\Debug\base.csprojAssemblyReference.cache
+C:\Users\vadim.salajan\source\repos\base\base\obj\Debug\base.csproj.CoreCompileInputs.cache
+C:\Users\vadim.salajan\source\repos\base\base\obj\Debug\@base.exe
+C:\Users\vadim.salajan\source\repos\base\base\obj\Debug\@base.pdb

@@ -8,20 +8,12 @@ namespace Inc
 {
     class Controller
     {
-        private readonly IBook _book;
-        private readonly IPerson _person;
-        public Controller(IBook book,IPerson person)
+        IRepository<Book> _book;
+        IRepository<Person> _person;
+        public Controller(IRepository<Book> bookRepository,IRepository<Person> person)
         {
-            _book = book;
+            _book = bookRepository;
             _person = person;
-        }
-        public void StartGetNumberBook()
-        {
-            _book.GetNumberBook(232);
-        }
-        public void GetTimeOfDayWork()
-        {
-            _person.GetTimeOfDayWork (DateTime.Now);
-        }
+        }   
     }
 }

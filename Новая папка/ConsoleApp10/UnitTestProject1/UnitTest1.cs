@@ -9,7 +9,7 @@ using People;
 
 namespace UnitTestProject1
 {
-    [TestClass]
+    [TestFixture]
     public class UnitTest1
     {
         private People.People _people;
@@ -27,7 +27,7 @@ namespace UnitTestProject1
         }
         [TestCase(100, "Declined")]
         [TestCase(549, "Declined")]
-        [TestCase(-550, "Maybe")]
+        [TestCase(550, "Maybe")]
         [TestCase(674, "Maybe")]
         [TestCase(675, "We look forward to doing business with you!")]
         public void MakeCreditDecision_Always_ReturnsExpectedResult(int creditScore, string expectedResult)
@@ -42,7 +42,7 @@ namespace UnitTestProject1
             _mockCreditDecisionService.Verify((p => p.MakeCreditDecision(655)),Times.Exactly(1));
         }
         [Test]
-        public void GetName()
+        public void ExpectedGetName()
         {
            //Arange
             string firstName ="Narasimha";

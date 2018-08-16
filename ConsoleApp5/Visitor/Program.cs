@@ -15,8 +15,10 @@ namespace Visitor
             p.Attach(new Milk());
             ImpostVisitor impost = new ImpostVisitor();
             AccountantVisitor accountant = new AccountantVisitor();
+            Product product = new Product();
+            
             p.Accept(impost);
-            p.Accept(accountant);      
+            p.Accept(accountant);  Console.WriteLine(product.GetType());    
             Console.ReadKey();
         }
     }

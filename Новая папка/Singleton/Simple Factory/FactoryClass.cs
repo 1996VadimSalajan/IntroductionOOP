@@ -11,6 +11,8 @@ namespace Simple_Factory
     {
         public static Mobile CreateMobileObject(MobileType mobileType)
         {
+          
+
             Mobile objIMobile = null;
             switch (mobileType)
             {
