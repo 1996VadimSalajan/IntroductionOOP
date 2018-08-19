@@ -17,7 +17,7 @@ namespace Math
     {
         static void Main(string[] args)
         {
-            string str = "123456789";
+            string str = "123456789";  
             int number = str.IntegerExtension();
             Console.WriteLine(number);
             Console.ReadKey();

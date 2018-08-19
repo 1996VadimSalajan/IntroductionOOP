@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Cloasure.cs" />
     <Compile Include="Library.cs" />
+    <Compile Include="Myclass.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

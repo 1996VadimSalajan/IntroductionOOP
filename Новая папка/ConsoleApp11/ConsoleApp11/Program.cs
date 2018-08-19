@@ -8,15 +8,34 @@ namespace ConsoleApp11
 {
     class Program
     {
+        private class AnonymousClass
+        {
+            public int myVar;
+            public int __AnonymousMethod1(int var1)
+            {
+                myVar = myVar + 1;
+                return var1 + myVar;
+            }
+        }
+        public static Func<int, int> GetAFunc()
+        {
+            var __anonymousClass = new AnonymousClass();
+            __anonymousClass.myVar = 1;
+            return __anonymousClass.__AnonymousMethod1;
+        }
         static void Main(string[] args)
         {
-            var add = Outer();
-           Console.WriteLine(add(3));
-            Console.WriteLine(add(5));
-            Person p1 = new Person { IdPerson = 1, Name = "Salajan", Surname = "Vadim", Age = 17 };
+            
+            var inc =GetAFunc();
+                Console.WriteLine(inc(5));
+                Console.WriteLine(inc(6));
+            
+           
+
+        Person p1 = new Person { IdPerson = 1, Name = "Salajan", Surname = "Vadim", Age = 17 };
             Person p2 = new Person { IdPerson = 2, Name = "Iovu", Surname = "Adrian", Age = 23 };
             Person p3 = new Person { IdPerson = 4, Name = "Carcea", Surname = "Adriana", Age = 43 };
-            Person p4 = new Person { IdPerson = 4, Name = "Cebotari", Surname = "Ana", Age = 33 };
+            Person p4 = new Person { IdPerson = 4, Name = "Cebotari", Surname = "Ana", Age = 23 };
 
             Library l1 = new Library { IdPerson = 1, NameBook = "History", Date = new DateTime(2018, 3, 4) };
             Library l2 = new Library { IdPerson = 1, NameBook = "Filosofy", Date = new DateTime(2018, 6, 4) };
@@ -27,11 +46,14 @@ namespace ConsoleApp11
             List<Library> book = new List<Library> { l1, l2,l3,l4 };
             var query = student.Min(x=>x.Name);
             query.ToList().ForEach(m=>Console.WriteLine(m));
-            
+            int[] f = { 1, 2, 3, 9, 1 };
+            var queryw = from w in f where w > 2 select w;
+            queryw.ToList().ForEach(x => Console.WriteLine(x));
             Console.WriteLine("\n Query1:");
             var query1 = from s in student
-                         where s.Age > 20 
-                         select new { Name = s.Name, Surname = s.Surname, Age = s.Age };
+                         where s.Name == "Salajan"
+                         select new { s.Name, s.Surname, s.Age };
+
             query1.ToList().ForEach(s => Console.WriteLine(s.Name + " " + s.Surname + " " + s.Age + ""));
             Console.WriteLine();
 
@@ -89,7 +111,7 @@ namespace ConsoleApp11
 
             Console.WriteLine("\n Query10:");
             var query10 = from s in student
-                          orderby s.Name, s.Surname descending
+                          orderby s.Name, s.Surname ascending
                           select s;
             query10.ToList().ForEach(s => Console.WriteLine(s.Name + " " + s.Surname));
 
