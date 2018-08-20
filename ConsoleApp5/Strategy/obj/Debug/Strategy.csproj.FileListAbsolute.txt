@@ -1,7 +1,0 @@
-C:\Users\vadim\source\repos\ConsoleApp5\Strategy\bin\Debug\Strategy.exe.config
-C:\Users\vadim\source\repos\ConsoleApp5\Strategy\bin\Debug\Strategy.exe
-C:\Users\vadim\source\repos\ConsoleApp5\Strategy\bin\Debug\Strategy.pdb
-C:\Users\vadim\source\repos\ConsoleApp5\Strategy\obj\Debug\Strategy.csprojAssemblyReference.cache
-C:\Users\vadim\source\repos\ConsoleApp5\Strategy\obj\Debug\Strategy.csproj.CoreCompileInputs.cache
-C:\Users\vadim\source\repos\ConsoleApp5\Strategy\obj\Debug\Strategy.exe
-C:\Users\vadim\source\repos\ConsoleApp5\Strategy\obj\Debug\Strategy.pdb

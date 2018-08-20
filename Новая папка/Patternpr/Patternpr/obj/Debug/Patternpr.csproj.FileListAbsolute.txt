@@ -1,7 +1,0 @@
-C:\Users\vadim.salajan\source\repos\Patternpr\Patternpr\bin\Debug\Patternpr.exe.config
-C:\Users\vadim.salajan\source\repos\Patternpr\Patternpr\bin\Debug\Patternpr.exe
-C:\Users\vadim.salajan\source\repos\Patternpr\Patternpr\bin\Debug\Patternpr.pdb
-C:\Users\vadim.salajan\source\repos\Patternpr\Patternpr\obj\Debug\Patternpr.csprojAssemblyReference.cache
-C:\Users\vadim.salajan\source\repos\Patternpr\Patternpr\obj\Debug\Patternpr.csproj.CoreCompileInputs.cache
-C:\Users\vadim.salajan\source\repos\Patternpr\Patternpr\obj\Debug\Patternpr.exe
-C:\Users\vadim.salajan\source\repos\Patternpr\Patternpr\obj\Debug\Patternpr.pdb

@@ -1,7 +1,0 @@
-C:\Users\vadim\source\repos\ConsoleApp5\Template\bin\Debug\Template.exe.config
-C:\Users\vadim\source\repos\ConsoleApp5\Template\bin\Debug\Template.exe
-C:\Users\vadim\source\repos\ConsoleApp5\Template\bin\Debug\Template.pdb
-C:\Users\vadim\source\repos\ConsoleApp5\Template\obj\Debug\Template.csprojAssemblyReference.cache
-C:\Users\vadim\source\repos\ConsoleApp5\Template\obj\Debug\Template.csproj.CoreCompileInputs.cache
-C:\Users\vadim\source\repos\ConsoleApp5\Template\obj\Debug\Template.exe
-C:\Users\vadim\source\repos\ConsoleApp5\Template\obj\Debug\Template.pdb

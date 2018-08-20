@@ -1,7 +1,0 @@
-C:\Users\vadim.salajan\source\repos\ConsoleApp10\ConsoleApp10\bin\Debug\ConsoleApp10.exe.config
-C:\Users\vadim.salajan\source\repos\ConsoleApp10\ConsoleApp10\bin\Debug\ConsoleApp10.exe
-C:\Users\vadim.salajan\source\repos\ConsoleApp10\ConsoleApp10\bin\Debug\ConsoleApp10.pdb
-C:\Users\vadim.salajan\source\repos\ConsoleApp10\ConsoleApp10\obj\Debug\Delegate.csprojAssemblyReference.cache
-C:\Users\vadim.salajan\source\repos\ConsoleApp10\ConsoleApp10\obj\Debug\Delegate.csproj.CoreCompileInputs.cache
-C:\Users\vadim.salajan\source\repos\ConsoleApp10\ConsoleApp10\obj\Debug\ConsoleApp10.exe
-C:\Users\vadim.salajan\source\repos\ConsoleApp10\ConsoleApp10\obj\Debug\ConsoleApp10.pdb

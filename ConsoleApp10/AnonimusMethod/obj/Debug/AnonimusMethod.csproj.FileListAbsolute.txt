@@ -1,7 +1,0 @@
-C:\Users\vadim.salajan\source\repos\ConsoleApp10\AnonimusMethod\obj\Debug\AnonimusMethod.csproj.CoreCompileInputs.cache
-C:\Users\vadim.salajan\source\repos\ConsoleApp10\AnonimusMethod\bin\Debug\AnonimusMethod.exe.config
-C:\Users\vadim.salajan\source\repos\ConsoleApp10\AnonimusMethod\bin\Debug\AnonimusMethod.exe
-C:\Users\vadim.salajan\source\repos\ConsoleApp10\AnonimusMethod\bin\Debug\AnonimusMethod.pdb
-C:\Users\vadim.salajan\source\repos\ConsoleApp10\AnonimusMethod\obj\Debug\AnonimusMethod.exe
-C:\Users\vadim.salajan\source\repos\ConsoleApp10\AnonimusMethod\obj\Debug\AnonimusMethod.pdb
-C:\Users\vadim.salajan\source\repos\ConsoleApp10\AnonimusMethod\obj\Debug\AnonimusMethod.csprojAssemblyReference.cache

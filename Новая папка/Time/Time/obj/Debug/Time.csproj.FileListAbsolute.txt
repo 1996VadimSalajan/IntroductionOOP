@@ -1,7 +1,0 @@
-C:\Users\vadim.salajan\source\repos\Time\Time\bin\Debug\Time.exe.config
-C:\Users\vadim.salajan\source\repos\Time\Time\bin\Debug\Time.exe
-C:\Users\vadim.salajan\source\repos\Time\Time\bin\Debug\Time.pdb
-C:\Users\vadim.salajan\source\repos\Time\Time\obj\Debug\Time.csprojAssemblyReference.cache
-C:\Users\vadim.salajan\source\repos\Time\Time\obj\Debug\Time.csproj.CoreCompileInputs.cache
-C:\Users\vadim.salajan\source\repos\Time\Time\obj\Debug\Time.exe
-C:\Users\vadim.salajan\source\repos\Time\Time\obj\Debug\Time.pdb

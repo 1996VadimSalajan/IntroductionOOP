@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl" Namespace="Model1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005">
+        <EntityContainer Name="Model1TargetContainer" >
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="Model1Container" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="User" EntityType="Model1.User" />
+          <EntitySet Name="Adresses" EntityType="Model1.Adress" />
+          <EntitySet Name="Courses" EntityType="Model1.Cours" />
+          <EntitySet Name="Events" EntityType="Model1.Event" />
+          <EntitySet Name="Groups" EntityType="Model1.Group" />
+          <EntitySet Name="Marks" EntityType="Model1.Mark" />
+          <EntitySet Name="Students" EntityType="Model1.Student" />
+          <EntitySet Name="sysdiagrams" EntityType="Model1.sysdiagram" />
+          <EntitySet Name="Teachers" EntityType="Model1.Teacher" />
+          <EntitySet Name="User1Set" EntityType="Model1.User1" />
+          <EntitySet Name="YearOfStudies" EntityType="Model1.YearOfStudy" />
+          <EntitySet Name="NewUsers" EntityType="Model1.NewUser" />
+          <AssociationSet Name="FK_Adress_Users" Association="Model1.FK_Adress_Users">
+            <End Role="User1" EntitySet="User1Set" />
+            <End Role="Adress" EntitySet="Adresses" />
+          </AssociationSet>
+          <AssociationSet Name="FK__StudentCo__IdStu__51EF2864" Association="Model1.FK__StudentCo__IdStu__51EF2864">
+            <End Role="Cours" EntitySet="Courses" />
+            <End Role="Mark" EntitySet="Marks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Courses_Group" Association="Model1.FK_Courses_Group">
+            <End Role="Group" EntitySet="Groups" />
+            <End Role="Cours" EntitySet="Courses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Courses_Teachers" Association="Model1.FK_Courses_Teachers">
+            <End Role="Teacher" EntitySet="Teachers" />
+            <End Role="Cours" EntitySet="Courses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Eveniments_Users" Association="Model1.FK_Eveniments_Users">
+            <End Role="User1" EntitySet="User1Set" />
+            <End Role="Event" EntitySet="Events" />
+          </AssociationSet>
+          <AssociationSet Name="Subscribes" Association="Model1.Subscribes">
+            <End Role="Event" EntitySet="Events" />
+            <End Role="Student" EntitySet="Students" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Students_Groups" Association="Model1.FK_Students_Groups">
+            <End Role="Group" EntitySet="Groups" />
+            <End Role="Student" EntitySet="Students" />
+          </AssociationSet>
+          <AssociationSet Name="FK__StudentCo__IdStu__52E34C9D" Association="Model1.FK__StudentCo__IdStu__52E34C9D">
+            <End Role="Student" EntitySet="Students" />
+            <End Role="Mark" EntitySet="Marks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Students_Users" Association="Model1.FK_Students_Users">
+            <End Role="User1" EntitySet="User1Set" />
+            <End Role="Student" EntitySet="Students" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Students_YearOfStudy" Association="Model1.FK_Students_YearOfStudy">
+            <End Role="YearOfStudy" EntitySet="YearOfStudies" />
+            <End Role="Student" EntitySet="Students" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="Email" />
+          </Key>
+          <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" Nullable="false" />
+          <Property Name="LastName" Type="String" Nullable="false" MaxLength="50" />
+          <Property Name="Email" Type="String" Nullable="false" />
+          <Property Name="PasswordUser" Type="String" Nullable="false" />
+          <Property Name="Age" Type="Int32" Nullable="false" />
+          <Property Name="Gender" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Adress">
+          <Key>
+            <PropertyRef Name="IdAdress" />
+          </Key>
+          <Property Name="IdAdress" Type="Int32" Nullable="false" />
+          <Property Name="Village" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="City" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="Country" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="IdUser" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="User" Relationship="Model1.FK_Adress_Users" FromRole="Adress" ToRole="User1" />
+        </EntityType>
+        <EntityType Name="Cours">
+          <Key>
+            <PropertyRef Name="IdCourse" />
+          </Key>
+          <Property Name="IdCourse" Type="Int32" Nullable="false" />
+          <Property Name="NameCourse" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="GroupId" Type="Int32" Nullable="false" />
+          <Property Name="DateCreateCourse" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="MainTeacher" Type="Int32" />
+          <NavigationProperty Name="Marks" Relationship="Model1.FK__StudentCo__IdStu__51EF2864" FromRole="Cours" ToRole="Mark" />
+          <NavigationProperty Name="Group" Relationship="Model1.FK_Courses_Group" FromRole="Cours" ToRole="Group" />
+          <NavigationProperty Name="Teacher" Relationship="Model1.FK_Courses_Teachers" FromRole="Cours" ToRole="Teacher" />
+        </EntityType>
+        <EntityType Name="Event">
+          <Key>
+            <PropertyRef Name="IdEvent" />
+          </Key>
+          <Property Name="IdEvent" Type="Int32" Nullable="false" />
+          <Property Name="EventName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Createby" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="User" Relationship="Model1.FK_Eveniments_Users" FromRole="Event" ToRole="User1" />
+          <NavigationProperty Name="Students" Relationship="Model1.Subscribes" FromRole="Event" ToRole="Student" />
+        </EntityType>
+        <EntityType Name="Group">
+          <Key>
+            <PropertyRef Name="GroupId" />
+          </Key>
+          <Property Name="GroupId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AcademicYear" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Courses" Relationship="Model1.FK_Courses_Group" FromRole="Group" ToRole="Cours" />
+          <NavigationProperty Name="Students" Relationship="Model1.FK_Students_Groups" FromRole="Group" ToRole="Student" />
+        </EntityType>
+        <EntityType Name="Mark">
+          <Key>
+            <PropertyRef Name="IdNote" />
+          </Key>
+          <Property Name="IdNote" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdCourse" Type="Int32" Nullable="false" />
+          <Property Name="IdStudent" Type="Int32" Nullable="false" />
+          <Property Name="Value" Type="Int32" />
+          <NavigationProperty Name="Cours" Relationship="Model1.FK__StudentCo__IdStu__51EF2864" FromRole="Mark" ToRole="Cours" />
+          <NavigationProperty Name="Student" Relationship="Model1.FK__StudentCo__IdStu__52E34C9D" FromRole="Mark" ToRole="Student" />
+        </EntityType>
+        <EntityType Name="Student">
+          <Key>
+            <PropertyRef Name="IdStudent" />
+          </Key>
+          <Property Name="IdStudent" Type="Int32" Nullable="false" />
+          <Property Name="EntryTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ExitTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Active" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Class" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="IdUser" Type="Int32" Nullable="false" />
+          <Property Name="GroupId" Type="Int32" Nullable="false" />
+          <Property Name="IdYear" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Events" Relationship="Model1.Subscribes" FromRole="Student" ToRole="Event" />
+          <NavigationProperty Name="Group" Relationship="Model1.FK_Students_Groups" FromRole="Student" ToRole="Group" />
+          <NavigationProperty Name="Marks" Relationship="Model1.FK__StudentCo__IdStu__52E34C9D" FromRole="Student" ToRole="Mark" />
+          <NavigationProperty Name="User" Relationship="Model1.FK_Students_Users" FromRole="Student" ToRole="User1" />
+          <NavigationProperty Name="YearOfStudy" Relationship="Model1.FK_Students_YearOfStudy" FromRole="Student" ToRole="YearOfStudy" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Teacher">
+          <Key>
+            <PropertyRef Name="IdTeacher" />
+          </Key>
+          <Property Name="IdTeacher" Type="Int32" Nullable="false" />
+          <Property Name="EntryTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ExitTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Active" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Degree" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Courses" Relationship="Model1.FK_Courses_Teachers" FromRole="Teacher" ToRole="Cours" />
+        </EntityType>
+        <EntityType Name="User1">
+          <Key>
+            <PropertyRef Name="IdUser" />
+          </Key>
+          <Property Name="IdUser" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="120" FixedLength="false" Unicode="false" />
+          <Property Name="LastName" Type="String" MaxLength="120" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PasswordUser" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="IDNP" Type="Int64" />
+          <Property Name="Photo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="BirthDate" Type="DateTime" Precision="0" />
+          <Property Name="Age" Type="Int32" />
+          <Property Name="Gender" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Adresses" Relationship="Model1.FK_Adress_Users" FromRole="User1" ToRole="Adress" />
+          <NavigationProperty Name="Events" Relationship="Model1.FK_Eveniments_Users" FromRole="User1" ToRole="Event" />
+          <NavigationProperty Name="Students" Relationship="Model1.FK_Students_Users" FromRole="User1" ToRole="Student" />
+        </EntityType>
+        <EntityType Name="YearOfStudy">
+          <Key>
+            <PropertyRef Name="IdYear" />
+          </Key>
+          <Property Name="IdYear" Type="Int32" Nullable="false" />
+          <Property Name="Semester1" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Semester2" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="Students" Relationship="Model1.FK_Students_YearOfStudy" FromRole="YearOfStudy" ToRole="Student" />
+        </EntityType>
+        <EntityType Name="NewUser">
+          <Key>
+            <PropertyRef Name="IdUser" />
+            <PropertyRef Name="Email" />
+          </Key>
+          <Property Name="IdUser" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="120" FixedLength="false" Unicode="false" />
+          <Property Name="LastName" Type="String" MaxLength="120" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IDNP" Type="Int64" />
+          <Property Name="BirthDate" Type="DateTime" Precision="0" />
+          <Property Name="Age" Type="Int32" />
+        </EntityType>
+        <Association Name="FK_Adress_Users">
+          <End Type="Model1.User1" Role="User1" Multiplicity="1" />
+          <End Type="Model1.Adress" Role="Adress" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User1">
+              <PropertyRef Name="IdUser" />
+            </Principal>
+            <Dependent Role="Adress">
+              <PropertyRef Name="IdUser" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__StudentCo__IdStu__51EF2864">
+          <End Type="Model1.Cours" Role="Cours" Multiplicity="1" />
+          <End Type="Model1.Mark" Role="Mark" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cours">
+              <PropertyRef Name="IdCourse" />
+            </Principal>
+            <Dependent Role="Mark">
+              <PropertyRef Name="IdStudent" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Courses_Group">
+          <End Type="Model1.Group" Role="Group" Multiplicity="1" />
+          <End Type="Model1.Cours" Role="Cours" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Group">
+              <PropertyRef Name="GroupId" />
+            </Principal>
+            <Dependent Role="Cours">
+              <PropertyRef Name="GroupId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Courses_Teachers">
+          <End Type="Model1.Teacher" Role="Teacher" Multiplicity="0..1" />
+          <End Type="Model1.Cours" Role="Cours" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teacher">
+              <PropertyRef Name="IdTeacher" />
+            </Principal>
+            <Dependent Role="Cours">
+              <PropertyRef Name="MainTeacher" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Eveniments_Users">
+          <End Type="Model1.User1" Role="User1" Multiplicity="1" />
+          <End Type="Model1.Event" Role="Event" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User1">
+              <PropertyRef Name="IdUser" />
+            </Principal>
+            <Dependent Role="Event">
+              <PropertyRef Name="Createby" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Subscribes">
+          <End Type="Model1.Event" Role="Event" Multiplicity="*" />
+          <End Type="Model1.Student" Role="Student" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_Students_Groups">
+          <End Type="Model1.Group" Role="Group" Multiplicity="1" />
+          <End Type="Model1.Student" Role="Student" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Group">
+              <PropertyRef Name="GroupId" />
+            </Principal>
+            <Dependent Role="Student">
+              <PropertyRef Name="GroupId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__StudentCo__IdStu__52E34C9D">
+          <End Type="Model1.Student" Role="Student" Multiplicity="1" />
+          <End Type="Model1.Mark" Role="Mark" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Student">
+              <PropertyRef Name="IdStudent" />
+            </Principal>
+            <Dependent Role="Mark">
+              <PropertyRef Name="IdStudent" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Students_Users">
+          <End Type="Model1.User1" Role="User1" Multiplicity="1" />
+          <End Type="Model1.Student" Role="Student" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User1">
+              <PropertyRef Name="IdUser" />
+            </Principal>
+            <Dependent Role="Student">
+              <PropertyRef Name="IdUser" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Students_YearOfStudy">
+          <End Type="Model1.YearOfStudy" Role="YearOfStudy" Multiplicity="1" />
+          <End Type="Model1.Student" Role="Student" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="YearOfStudy">
+              <PropertyRef Name="IdYear" />
+            </Principal>
+            <Dependent Role="Student">
+              <PropertyRef Name="IdYear" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs" Space="C-S">
+        <Alias Key="Model" Value="Model1" />
+        <Alias Key="Target" Value="Model1.Store" />
+        <EntityContainerMapping CdmEntityContainer="Model1Container" StorageEntityContainer="Model1TargetContainer">
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,7 +1,0 @@
-C:\Users\vadim.salajan\source\repos\ConsoleApp8\Var\bin\Debug\Var.exe.config
-C:\Users\vadim.salajan\source\repos\ConsoleApp8\Var\bin\Debug\Var.exe
-C:\Users\vadim.salajan\source\repos\ConsoleApp8\Var\bin\Debug\Var.pdb
-C:\Users\vadim.salajan\source\repos\ConsoleApp8\Var\obj\Debug\Var.csprojAssemblyReference.cache
-C:\Users\vadim.salajan\source\repos\ConsoleApp8\Var\obj\Debug\Var.csproj.CoreCompileInputs.cache
-C:\Users\vadim.salajan\source\repos\ConsoleApp8\Var\obj\Debug\Var.exe
-C:\Users\vadim.salajan\source\repos\ConsoleApp8\Var\obj\Debug\Var.pdb

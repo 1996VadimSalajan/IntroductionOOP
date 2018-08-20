@@ -1,7 +1,0 @@
-C:\Users\vadim.salajan\source\repos\ConsoleApp6\MATRICE\bin\Debug\MATRICE.exe.config
-C:\Users\vadim.salajan\source\repos\ConsoleApp6\MATRICE\bin\Debug\MATRICE.exe
-C:\Users\vadim.salajan\source\repos\ConsoleApp6\MATRICE\bin\Debug\MATRICE.pdb
-C:\Users\vadim.salajan\source\repos\ConsoleApp6\MATRICE\obj\Debug\MATRICE.csprojAssemblyReference.cache
-C:\Users\vadim.salajan\source\repos\ConsoleApp6\MATRICE\obj\Debug\MATRICE.csproj.CoreCompileInputs.cache
-C:\Users\vadim.salajan\source\repos\ConsoleApp6\MATRICE\obj\Debug\MATRICE.exe
-C:\Users\vadim.salajan\source\repos\ConsoleApp6\MATRICE\obj\Debug\MATRICE.pdb

@@ -1,7 +1,0 @@
-C:\Users\vadim.salajan\source\repos\Singleton\Singleton\bin\Debug\Singleton.exe.config
-C:\Users\vadim.salajan\source\repos\Singleton\Singleton\bin\Debug\Singleton.exe
-C:\Users\vadim.salajan\source\repos\Singleton\Singleton\bin\Debug\Singleton.pdb
-C:\Users\vadim.salajan\source\repos\Singleton\Singleton\obj\Debug\Singleton.csproj.CoreCompileInputs.cache
-C:\Users\vadim.salajan\source\repos\Singleton\Singleton\obj\Debug\Singleton.exe
-C:\Users\vadim.salajan\source\repos\Singleton\Singleton\obj\Debug\Singleton.pdb
-C:\Users\vadim.salajan\source\repos\Singleton\Singleton\obj\Debug\Singleton.csprojAssemblyReference.cache

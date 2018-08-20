@@ -1,0 +1,335 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MoodleModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Adress">
+    <Key>
+      <PropertyRef Name="IdAdress" />
+    </Key>
+    <Property Name="IdAdress" Type="Int32" Nullable="false" />
+    <Property Name="Village" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="City" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="Country" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="IdUser" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="Self.FK_Adress_Users" FromRole="Adress" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Cours">
+    <Key>
+      <PropertyRef Name="IdCourse" />
+    </Key>
+    <Property Name="IdCourse" Type="Int32" Nullable="false" />
+    <Property Name="NameCourse" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="GroupId" Type="Int32" Nullable="false" />
+    <Property Name="DateCreateCourse" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="MainTeacher" Type="Int32" />
+    <NavigationProperty Name="Marks" Relationship="Self.FK__StudentCo__IdStu__51EF2864" FromRole="Courses" ToRole="Marks" />
+    <NavigationProperty Name="Group" Relationship="Self.FK_Courses_Group" FromRole="Courses" ToRole="Groups" />
+    <NavigationProperty Name="Teacher" Relationship="Self.FK_Courses_Teachers" FromRole="Courses" ToRole="Teachers" />
+  </EntityType>
+  <EntityType Name="Event">
+    <Key>
+      <PropertyRef Name="IdEvent" />
+    </Key>
+    <Property Name="IdEvent" Type="Int32" Nullable="false" />
+    <Property Name="EventName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Createby" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="Self.FK_Eveniments_Users" FromRole="Events" ToRole="Users" />
+    <NavigationProperty Name="Students" Relationship="Self.Subscribes" FromRole="Events" ToRole="Students" />
+  </EntityType>
+  <EntityType Name="Group">
+    <Key>
+      <PropertyRef Name="GroupId" />
+    </Key>
+    <Property Name="GroupId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AcademicYear" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Courses" Relationship="Self.FK_Courses_Group" FromRole="Groups" ToRole="Courses" />
+    <NavigationProperty Name="Students" Relationship="Self.FK_Students_Groups" FromRole="Groups" ToRole="Students" />
+  </EntityType>
+  <EntityType Name="Mark">
+    <Key>
+      <PropertyRef Name="IdNote" />
+    </Key>
+    <Property Name="IdNote" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdCourse" Type="Int32" Nullable="false" />
+    <Property Name="IdStudent" Type="Int32" Nullable="false" />
+    <Property Name="Value" Type="Int32" />
+    <NavigationProperty Name="Cours" Relationship="Self.FK__StudentCo__IdStu__51EF2864" FromRole="Marks" ToRole="Courses" />
+    <NavigationProperty Name="Student" Relationship="Self.FK__StudentCo__IdStu__52E34C9D" FromRole="Marks" ToRole="Students" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="IdStudent" />
+    </Key>
+    <Property Name="IdStudent" Type="Int32" Nullable="false" />
+    <Property Name="EntryTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ExitTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Active" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Class" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="IdUser" Type="Int32" Nullable="false" />
+    <Property Name="GroupId" Type="Int32" Nullable="false" />
+    <Property Name="IdYear" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Group" Relationship="Self.FK_Students_Groups" FromRole="Students" ToRole="Groups" />
+    <NavigationProperty Name="Marks" Relationship="Self.FK__StudentCo__IdStu__52E34C9D" FromRole="Students" ToRole="Marks" />
+    <NavigationProperty Name="User" Relationship="Self.FK_Students_Users" FromRole="Students" ToRole="Users" />
+    <NavigationProperty Name="YearOfStudy" Relationship="Self.FK_Students_YearOfStudy" FromRole="Students" ToRole="YearOfStudy" />
+    <NavigationProperty Name="Events" Relationship="Self.Subscribes" FromRole="Students" ToRole="Events" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Teacher">
+    <Key>
+      <PropertyRef Name="IdTeacher" />
+    </Key>
+    <Property Name="IdTeacher" Type="Int32" Nullable="false" />
+    <Property Name="EntryTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ExitTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Active" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Degree" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Courses" Relationship="Self.FK_Courses_Teachers" FromRole="Teachers" ToRole="Courses" />
+    <NavigationProperty Name="User" Relationship="Self.FK__Teachers__IdTeac__4A4E069C" FromRole="Teachers" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="IdUser" />
+    </Key>
+    <Property Name="IdUser" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="120" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" MaxLength="120" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PasswordUser" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IDNP" Type="Int64" />
+    <Property Name="Photo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="BirthDate" Type="DateTime" Precision="0" />
+    <Property Name="Age" Type="Int32" />
+    <Property Name="Gender" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Adresses" Relationship="Self.FK_Adress_Users" FromRole="Users" ToRole="Adress" />
+    <NavigationProperty Name="Events" Relationship="Self.FK_Eveniments_Users" FromRole="Users" ToRole="Events" />
+    <NavigationProperty Name="Students" Relationship="Self.FK_Students_Users" FromRole="Users" ToRole="Students" />
+    <NavigationProperty Name="Teacher" Relationship="Self.FK__Teachers__IdTeac__4A4E069C" FromRole="Users" ToRole="Teachers" />
+  </EntityType>
+  <EntityType Name="YearOfStudy">
+    <Key>
+      <PropertyRef Name="IdYear" />
+    </Key>
+    <Property Name="IdYear" Type="Int32" Nullable="false" />
+    <Property Name="Semester1" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Semester2" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="Students" Relationship="Self.FK_Students_YearOfStudy" FromRole="YearOfStudy" ToRole="Students" />
+  </EntityType>
+  <EntityType Name="NewUser">
+    <Key>
+      <PropertyRef Name="IdUser" />
+      <PropertyRef Name="Email" />
+    </Key>
+    <Property Name="IdUser" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="120" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" MaxLength="120" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IDNP" Type="Int64" />
+    <Property Name="BirthDate" Type="DateTime" Precision="0" />
+    <Property Name="Age" Type="Int32" />
+  </EntityType>
+  <Association Name="FK_Adress_Users">
+    <End Role="Users" Type="Self.User" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Adress" Type="Self.Adress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="IdUser" />
+      </Principal>
+      <Dependent Role="Adress">
+        <PropertyRef Name="IdUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__StudentCo__IdStu__51EF2864">
+    <End Role="Courses" Type="Self.Cours" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Marks" Type="Self.Mark" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Courses">
+        <PropertyRef Name="IdCourse" />
+      </Principal>
+      <Dependent Role="Marks">
+        <PropertyRef Name="IdStudent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Courses_Group">
+    <End Role="Groups" Type="Self.Group" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Courses" Type="Self.Cours" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Groups">
+        <PropertyRef Name="GroupId" />
+      </Principal>
+      <Dependent Role="Courses">
+        <PropertyRef Name="GroupId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Courses_Teachers">
+    <End Role="Teachers" Type="Self.Teacher" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Courses" Type="Self.Cours" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teachers">
+        <PropertyRef Name="IdTeacher" />
+      </Principal>
+      <Dependent Role="Courses">
+        <PropertyRef Name="MainTeacher" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Eveniments_Users">
+    <End Role="Users" Type="Self.User" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Events" Type="Self.Event" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="IdUser" />
+      </Principal>
+      <Dependent Role="Events">
+        <PropertyRef Name="Createby" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Students_Groups">
+    <End Role="Groups" Type="Self.Group" Multiplicity="1" />
+    <End Role="Students" Type="Self.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Groups">
+        <PropertyRef Name="GroupId" />
+      </Principal>
+      <Dependent Role="Students">
+        <PropertyRef Name="GroupId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__StudentCo__IdStu__52E34C9D">
+    <End Role="Students" Type="Self.Student" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Marks" Type="Self.Mark" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Students">
+        <PropertyRef Name="IdStudent" />
+      </Principal>
+      <Dependent Role="Marks">
+        <PropertyRef Name="IdStudent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Students_Users">
+    <End Role="Users" Type="Self.User" Multiplicity="1" />
+    <End Role="Students" Type="Self.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="IdUser" />
+      </Principal>
+      <Dependent Role="Students">
+        <PropertyRef Name="IdUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Students_YearOfStudy">
+    <End Role="YearOfStudy" Type="Self.YearOfStudy" Multiplicity="1" />
+    <End Role="Students" Type="Self.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="YearOfStudy">
+        <PropertyRef Name="IdYear" />
+      </Principal>
+      <Dependent Role="Students">
+        <PropertyRef Name="IdYear" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Teachers__IdTeac__4A4E069C">
+    <End Role="Users" Type="Self.User" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Teachers" Type="Self.Teacher" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="IdUser" />
+      </Principal>
+      <Dependent Role="Teachers">
+        <PropertyRef Name="IdTeacher" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Subscribes">
+    <End Role="Events" Type="Self.Event" Multiplicity="*" />
+    <End Role="Students" Type="Self.Student" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="MoodleEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Adresses" EntityType="Self.Adress" />
+    <EntitySet Name="Courses" EntityType="Self.Cours" />
+    <EntitySet Name="Events" EntityType="Self.Event" />
+    <EntitySet Name="Groups" EntityType="Self.Group" />
+    <EntitySet Name="Marks" EntityType="Self.Mark" />
+    <EntitySet Name="Students" EntityType="Self.Student" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="Teachers" EntityType="Self.Teacher" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <EntitySet Name="YearOfStudies" EntityType="Self.YearOfStudy" />
+    <EntitySet Name="NewUsers" EntityType="Self.NewUser" />
+    <AssociationSet Name="FK_Adress_Users" Association="Self.FK_Adress_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Adress" EntitySet="Adresses" />
+    </AssociationSet>
+    <AssociationSet Name="FK__StudentCo__IdStu__51EF2864" Association="Self.FK__StudentCo__IdStu__51EF2864">
+      <End Role="Courses" EntitySet="Courses" />
+      <End Role="Marks" EntitySet="Marks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Courses_Group" Association="Self.FK_Courses_Group">
+      <End Role="Groups" EntitySet="Groups" />
+      <End Role="Courses" EntitySet="Courses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Courses_Teachers" Association="Self.FK_Courses_Teachers">
+      <End Role="Teachers" EntitySet="Teachers" />
+      <End Role="Courses" EntitySet="Courses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Eveniments_Users" Association="Self.FK_Eveniments_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Events" EntitySet="Events" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Students_Groups" Association="Self.FK_Students_Groups">
+      <End Role="Groups" EntitySet="Groups" />
+      <End Role="Students" EntitySet="Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK__StudentCo__IdStu__52E34C9D" Association="Self.FK__StudentCo__IdStu__52E34C9D">
+      <End Role="Students" EntitySet="Students" />
+      <End Role="Marks" EntitySet="Marks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Students_Users" Association="Self.FK_Students_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Students" EntitySet="Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Students_YearOfStudy" Association="Self.FK_Students_YearOfStudy">
+      <End Role="YearOfStudy" EntitySet="YearOfStudies" />
+      <End Role="Students" EntitySet="Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Teachers__IdTeac__4A4E069C" Association="Self.FK__Teachers__IdTeac__4A4E069C">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Teachers" EntitySet="Teachers" />
+    </AssociationSet>
+    <AssociationSet Name="Subscribes" Association="Self.Subscribes">
+      <End Role="Events" EntitySet="Events" />
+      <End Role="Students" EntitySet="Students" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

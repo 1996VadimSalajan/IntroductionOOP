@@ -1,0 +1,12 @@
+C:\Users\vadim.salajan\source\repos\Database\Database\bin\Debug\Database.exe.config
+C:\Users\vadim.salajan\source\repos\Database\Database\bin\Debug\Database.exe
+C:\Users\vadim.salajan\source\repos\Database\Database\bin\Debug\Database.pdb
+C:\Users\vadim.salajan\source\repos\Database\Database\bin\Debug\EntityFramework.dll
+C:\Users\vadim.salajan\source\repos\Database\Database\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\vadim.salajan\source\repos\Database\Database\bin\Debug\EntityFramework.xml
+C:\Users\vadim.salajan\source\repos\Database\Database\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\vadim.salajan\source\repos\Database\Database\obj\Debug\Database.csprojAssemblyReference.cache
+C:\Users\vadim.salajan\source\repos\Database\Database\obj\Debug\Database.csproj.CoreCompileInputs.cache
+C:\Users\vadim.salajan\source\repos\Database\Database\obj\Debug\Database.csproj.CopyComplete
+C:\Users\vadim.salajan\source\repos\Database\Database\obj\Debug\Database.exe
+C:\Users\vadim.salajan\source\repos\Database\Database\obj\Debug\Database.pdb

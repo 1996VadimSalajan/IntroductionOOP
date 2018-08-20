@@ -1,6 +1,0 @@
-D:\IntroductionOOP\Новая папка\ConsoleApp10\Delegate\bin\Debug\Delegate.exe.config
-D:\IntroductionOOP\Новая папка\ConsoleApp10\Delegate\bin\Debug\Delegate.exe
-D:\IntroductionOOP\Новая папка\ConsoleApp10\Delegate\bin\Debug\Delegate.pdb
-D:\IntroductionOOP\Новая папка\ConsoleApp10\Delegate\obj\Debug\First.csproj.CoreCompileInputs.cache
-D:\IntroductionOOP\Новая папка\ConsoleApp10\Delegate\obj\Debug\Delegate.exe
-D:\IntroductionOOP\Новая папка\ConsoleApp10\Delegate\obj\Debug\Delegate.pdb
