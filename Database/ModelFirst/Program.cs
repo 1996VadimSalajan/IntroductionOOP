@@ -10,6 +10,7 @@ namespace ModelFirst
     {
         static void Main(string[] args)
         {
+            Console.ReadKey();
         }
     }
 }

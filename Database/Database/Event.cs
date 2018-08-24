@@ -17,14 +17,17 @@ namespace Database
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Event()
         {
+            this.EventsStudents = new HashSet<EventsStudent>();
             this.Students = new HashSet<Student>();
         }
     
-        public int IdEvent { get; set; }
+        public int EventId { get; set; }
         public string EventName { get; set; }
-        public int Createby { get; set; }
+        public int UserId { get; set; }
     
         public virtual User User { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<EventsStudent> EventsStudents { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Student> Students { get; set; }
     }

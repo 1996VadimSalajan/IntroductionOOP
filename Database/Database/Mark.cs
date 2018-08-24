@@ -14,12 +14,12 @@ namespace Database
     
     public partial class Mark
     {
-        public int IdNote { get; set; }
-        public int IdCourse { get; set; }
-        public int IdStudent { get; set; }
+        public int MarkId { get; set; }
+        public int CoursId { get; set; }
+        public int StudentId { get; set; }
         public Nullable<int> Value { get; set; }
     
-        public virtual Cours Cours { get; set; }
+        public virtual Cour Cour { get; set; }
         public virtual Student Student { get; set; }
     }
 }

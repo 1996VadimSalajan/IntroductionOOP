@@ -4,8 +4,30 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="9d27f9de92844523aad7cf80aaab8612" Name="Diagram1" ZoomLevel="37" >
-        </Diagram>
+      <Diagram DiagramId="9d27f9de92844523aad7cf80aaab8612" Name="Diagram1" ZoomLevel="82" >
+        <EntityTypeShape EntityType="Model1.Address" Width="1.5" PointX="12.75" PointY="5.875" />
+        <EntityTypeShape EntityType="Model1.Cour" Width="1.5" PointX="15" PointY="16.75" />
+        <EntityTypeShape EntityType="Model1.Event1" Width="1.5" PointX="12.75" PointY="8.875" />
+        <EntityTypeShape EntityType="Model1.EventsStudent" Width="1.5" PointX="15" PointY="9.125" />
+        <EntityTypeShape EntityType="Model1.Group1" Width="1.5" PointX="12.75" PointY="2.875" />
+        <EntityTypeShape EntityType="Model1.Mark1" Width="1.5" PointX="17.25" PointY="5" />
+        <EntityTypeShape EntityType="Model1.Student1" Width="1.5" PointX="15" PointY="4.25" />
+        <EntityTypeShape EntityType="Model1.Teacher1" Width="1.5" PointX="12.75" PointY="17" />
+        <EntityTypeShape EntityType="Model1.User2" Width="1.5" PointX="10.5" PointY="5.125" />
+        <EntityTypeShape EntityType="Model1.YearOfStudy1" Width="1.5" PointX="12.75" PointY="13.5" />
+        <AssociationConnector Association="Model1.FK_dbo_Addresses_dbo_Users_UserId" />
+        <AssociationConnector Association="Model1.FK_dbo_Cours_dbo_Groups_GroupId" />
+        <AssociationConnector Association="Model1.FK_dbo_Cours_dbo_Teachers_TeacherId" />
+        <AssociationConnector Association="Model1.FK_dbo_Marks_dbo_Cours_CoursId" />
+        <AssociationConnector Association="Model1.FK_dbo_Events_dbo_Users_UserId" />
+        <AssociationConnector Association="Model1.FK_dbo_EventsStudents_dbo_Events_StudentId" />
+        <AssociationConnector Association="Model1.StudentEvents" />
+        <AssociationConnector Association="Model1.FK_dbo_EventsStudents_dbo_Students_StudentId" />
+        <AssociationConnector Association="Model1.FK_dbo_Students_dbo_Groups_GroupId" />
+        <AssociationConnector Association="Model1.FK_dbo_Marks_dbo_Students_StudentId" />
+        <AssociationConnector Association="Model1.FK_dbo_Students_dbo_Users_UserId" />
+        <AssociationConnector Association="Model1.FK_Students_YearOfStudies" />
+      </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
 </edmx:Edmx>

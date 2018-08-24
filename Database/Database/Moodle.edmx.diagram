@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5caa1a949d7a41b89ae3e788301be94a" Name="Diagram1">
+        <EntityTypeShape EntityType="NewMoodleModel.Address" Width="1.5" PointX="3" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="NewMoodleModel.Cour" Width="1.5" PointX="5.25" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="NewMoodleModel.Event" Width="1.5" PointX="3" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="NewMoodleModel.EventsStudent" Width="1.5" PointX="5.25" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NewMoodleModel.Group" Width="1.5" PointX="6" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="NewMoodleModel.Mark" Width="1.5" PointX="10.5" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NewMoodleModel.Student" Width="1.5" PointX="8.25" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="NewMoodleModel.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NewMoodleModel.Teacher" Width="1.5" PointX="3" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="NewMoodleModel.User" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NewMoodleModel.YearOfStudy" Width="1.5" PointX="6" PointY="13.125" IsExpanded="true" />
+        <AssociationConnector Association="NewMoodleModel.FK_dbo_Addresses_dbo_Users_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="NewMoodleModel.FK_dbo_Cours_dbo_Groups_GroupId" ManuallyRouted="false" />
+        <AssociationConnector Association="NewMoodleModel.FK_dbo_Cours_dbo_Teachers_TeacherId" ManuallyRouted="false" />
+        <AssociationConnector Association="NewMoodleModel.FK_dbo_Marks_dbo_Cours_CoursId" ManuallyRouted="false" />
+        <AssociationConnector Association="NewMoodleModel.FK_dbo_Events_dbo_Users_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="NewMoodleModel.FK_dbo_EventsStudents_dbo_Events_StudentId" ManuallyRouted="false" />
+        <AssociationConnector Association="NewMoodleModel.FK_dbo_EventsStudents_dbo_Students_StudentId" ManuallyRouted="false" />
+        <AssociationConnector Association="NewMoodleModel.FK_dbo_Students_dbo_Groups_GroupId" ManuallyRouted="false" />
+        <AssociationConnector Association="NewMoodleModel.FK_dbo_Marks_dbo_Students_StudentId" ManuallyRouted="false" />
+        <AssociationConnector Association="NewMoodleModel.FK_dbo_Students_dbo_Users_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="NewMoodleModel.FK_Students_YearOfStudies" ManuallyRouted="false" />
+        <AssociationConnector Association="NewMoodleModel.FK_dbo_Teachers_dbo_Users_TeacherId" ManuallyRouted="false" />
+        <AssociationConnector Association="NewMoodleModel.StudentEvents" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

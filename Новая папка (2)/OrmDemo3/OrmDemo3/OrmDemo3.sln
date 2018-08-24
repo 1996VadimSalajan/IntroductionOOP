@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirst", "OrmDemo3\CodeFirst.csproj", "{30B72021-C14A-44BA-BAF2-EA1EDA4A71AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseFirst", "DatabaseFirst\DatabaseFirst.csproj", "{EC8A5494-2771-4622-A2E7-F1D0D5FE0422}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelFist", "ModelFist\ModelFist.csproj", "{E13A7B68-9B28-4A1A-8365-00EF94D37C2D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{30B72021-C14A-44BA-BAF2-EA1EDA4A71AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30B72021-C14A-44BA-BAF2-EA1EDA4A71AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30B72021-C14A-44BA-BAF2-EA1EDA4A71AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30B72021-C14A-44BA-BAF2-EA1EDA4A71AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC8A5494-2771-4622-A2E7-F1D0D5FE0422}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC8A5494-2771-4622-A2E7-F1D0D5FE0422}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC8A5494-2771-4622-A2E7-F1D0D5FE0422}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC8A5494-2771-4622-A2E7-F1D0D5FE0422}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E13A7B68-9B28-4A1A-8365-00EF94D37C2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E13A7B68-9B28-4A1A-8365-00EF94D37C2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E13A7B68-9B28-4A1A-8365-00EF94D37C2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E13A7B68-9B28-4A1A-8365-00EF94D37C2D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9D109741-9D19-4536-8540-CE8D151BE175}
+	EndGlobalSection
+EndGlobal

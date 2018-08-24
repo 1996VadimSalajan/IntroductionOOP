@@ -1,0 +1,657 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="Model1StoreContainer">
+    <EntitySet Name="User" EntityType="Model1.Store.User" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Adresses" EntityType="Model1.Store.Adresses" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Courses" EntityType="Model1.Store.Courses" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Events" EntityType="Model1.Store.Events" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Groups" EntityType="Model1.Store.Groups" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Marks" EntityType="Model1.Store.Marks" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Students" EntityType="Model1.Store.Students" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="sysdiagrams" EntityType="Model1.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Teachers" EntityType="Model1.Store.Teachers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="User1Set" EntityType="Model1.Store.User1Set" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="YearOfStudies" EntityType="Model1.Store.YearOfStudies" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="NewUsers" EntityType="Model1.Store.NewUsers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Addresses" EntityType="Model1.Store.Addresses" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Cours" EntityType="Model1.Store.Cours" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Event1Set" EntityType="Model1.Store.Event1Set" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EventsStudents" EntityType="Model1.Store.EventsStudents" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Group1Set" EntityType="Model1.Store.Group1Set" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Mark1Set" EntityType="Model1.Store.Mark1Set" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Student1Set" EntityType="Model1.Store.Student1Set" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Teacher1Set" EntityType="Model1.Store.Teacher1Set" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="User2Set" EntityType="Model1.Store.User2Set" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="YearOfStudy1Set" EntityType="Model1.Store.YearOfStudy1Set" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Subscribes" EntityType="Model1.Store.Subscribes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="StudentEvents" EntityType="Model1.Store.StudentEvents" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Adress_Users" Association="Model1.Store.FK_Adress_Users">
+      <End Role="User1" EntitySet="User1Set" />
+      <End Role="Adress" EntitySet="Adresses" />
+    </AssociationSet>
+    <AssociationSet Name="FK__StudentCo__IdStu__51EF2864" Association="Model1.Store.FK__StudentCo__IdStu__51EF2864">
+      <End Role="Cours" EntitySet="Courses" />
+      <End Role="Mark" EntitySet="Marks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Courses_Group" Association="Model1.Store.FK_Courses_Group">
+      <End Role="Group" EntitySet="Groups" />
+      <End Role="Cours" EntitySet="Courses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Courses_Teachers" Association="Model1.Store.FK_Courses_Teachers">
+      <End Role="Teacher" EntitySet="Teachers" />
+      <End Role="Cours" EntitySet="Courses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Eveniments_Users" Association="Model1.Store.FK_Eveniments_Users">
+      <End Role="User1" EntitySet="User1Set" />
+      <End Role="Event" EntitySet="Events" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Subscribes_Event" Association="Model1.Store.FK_Subscribes_Event">
+      <End Role="Event" EntitySet="Events" />
+      <End Role="Subscribes" EntitySet="Subscribes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Subscribes_Student" Association="Model1.Store.FK_Subscribes_Student">
+      <End Role="Student" EntitySet="Students" />
+      <End Role="Subscribes" EntitySet="Subscribes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Students_Groups" Association="Model1.Store.FK_Students_Groups">
+      <End Role="Group" EntitySet="Groups" />
+      <End Role="Student" EntitySet="Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK__StudentCo__IdStu__52E34C9D" Association="Model1.Store.FK__StudentCo__IdStu__52E34C9D">
+      <End Role="Student" EntitySet="Students" />
+      <End Role="Mark" EntitySet="Marks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Students_Users" Association="Model1.Store.FK_Students_Users">
+      <End Role="User1" EntitySet="User1Set" />
+      <End Role="Student" EntitySet="Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Students_YearOfStudy" Association="Model1.Store.FK_Students_YearOfStudy">
+      <End Role="YearOfStudy" EntitySet="YearOfStudies" />
+      <End Role="Student" EntitySet="Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Addresses_dbo_Users_UserId" Association="Model1.Store.FK_dbo_Addresses_dbo_Users_UserId">
+      <End Role="User2" EntitySet="User2Set" />
+      <End Role="Address" EntitySet="Addresses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Cours_dbo_Groups_GroupId" Association="Model1.Store.FK_dbo_Cours_dbo_Groups_GroupId">
+      <End Role="Group1" EntitySet="Group1Set" />
+      <End Role="Cour" EntitySet="Cours" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Cours_dbo_Teachers_TeacherId" Association="Model1.Store.FK_dbo_Cours_dbo_Teachers_TeacherId">
+      <End Role="Teacher1" EntitySet="Teacher1Set" />
+      <End Role="Cour" EntitySet="Cours" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Marks_dbo_Cours_CoursId" Association="Model1.Store.FK_dbo_Marks_dbo_Cours_CoursId">
+      <End Role="Cour" EntitySet="Cours" />
+      <End Role="Mark1" EntitySet="Mark1Set" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Events_dbo_Users_UserId" Association="Model1.Store.FK_dbo_Events_dbo_Users_UserId">
+      <End Role="User2" EntitySet="User2Set" />
+      <End Role="Event1" EntitySet="Event1Set" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_EventsStudents_dbo_Events_StudentId" Association="Model1.Store.FK_dbo_EventsStudents_dbo_Events_StudentId">
+      <End Role="Event1" EntitySet="Event1Set" />
+      <End Role="EventsStudent" EntitySet="EventsStudents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudentEvents_Event1" Association="Model1.Store.FK_StudentEvents_Event1">
+      <End Role="Event1" EntitySet="Event1Set" />
+      <End Role="StudentEvents" EntitySet="StudentEvents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudentEvents_Student1" Association="Model1.Store.FK_StudentEvents_Student1">
+      <End Role="Student1" EntitySet="Student1Set" />
+      <End Role="StudentEvents" EntitySet="StudentEvents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_EventsStudents_dbo_Students_StudentId" Association="Model1.Store.FK_dbo_EventsStudents_dbo_Students_StudentId">
+      <End Role="Student1" EntitySet="Student1Set" />
+      <End Role="EventsStudent" EntitySet="EventsStudents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Students_dbo_Groups_GroupId" Association="Model1.Store.FK_dbo_Students_dbo_Groups_GroupId">
+      <End Role="Group1" EntitySet="Group1Set" />
+      <End Role="Student1" EntitySet="Student1Set" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Marks_dbo_Students_StudentId" Association="Model1.Store.FK_dbo_Marks_dbo_Students_StudentId">
+      <End Role="Student1" EntitySet="Student1Set" />
+      <End Role="Mark1" EntitySet="Mark1Set" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Students_dbo_Users_UserId" Association="Model1.Store.FK_dbo_Students_dbo_Users_UserId">
+      <End Role="User2" EntitySet="User2Set" />
+      <End Role="Student1" EntitySet="Student1Set" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Students_YearOfStudies" Association="Model1.Store.FK_Students_YearOfStudies">
+      <End Role="YearOfStudy1" EntitySet="YearOfStudy1Set" />
+      <End Role="Student1" EntitySet="Student1Set" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="Email" />
+    </Key>
+    <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PasswordUser" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Age" Type="int" Nullable="false" />
+    <Property Name="Gender" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Adresses">
+    <Key>
+      <PropertyRef Name="IdAdress" />
+    </Key>
+    <Property Name="IdAdress" Type="int" Nullable="false" />
+    <Property Name="Village" Type="varchar" Nullable="true" MaxLength="40" />
+    <Property Name="City" Type="varchar" Nullable="true" MaxLength="40" />
+    <Property Name="Country" Type="varchar" Nullable="true" MaxLength="40" />
+    <Property Name="IdUser" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Courses">
+    <Key>
+      <PropertyRef Name="IdCourse" />
+    </Key>
+    <Property Name="IdCourse" Type="int" Nullable="false" />
+    <Property Name="NameCourse" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="GroupId" Type="int" Nullable="false" />
+    <Property Name="DateCreateCourse" Type="datetime" Nullable="false" />
+    <Property Name="MainTeacher" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Events">
+    <Key>
+      <PropertyRef Name="IdEvent" />
+    </Key>
+    <Property Name="IdEvent" Type="int" Nullable="false" />
+    <Property Name="EventName" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Createby" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Groups">
+    <Key>
+      <PropertyRef Name="GroupId" />
+    </Key>
+    <Property Name="GroupId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AcademicYear" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Marks">
+    <Key>
+      <PropertyRef Name="IdNote" />
+    </Key>
+    <Property Name="IdNote" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdCourse" Type="int" Nullable="false" />
+    <Property Name="IdStudent" Type="int" Nullable="false" />
+    <Property Name="Value" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Students">
+    <Key>
+      <PropertyRef Name="IdStudent" />
+    </Key>
+    <Property Name="IdStudent" Type="int" Nullable="false" />
+    <Property Name="EntryTime" Type="datetime" Nullable="false" />
+    <Property Name="ExitTime" Type="datetime" Nullable="false" />
+    <Property Name="Active" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Class" Type="varchar" Nullable="true" MaxLength="10" />
+    <Property Name="IdUser" Type="int" Nullable="false" />
+    <Property Name="GroupId" Type="int" Nullable="false" />
+    <Property Name="IdYear" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" Nullable="true" />
+    <Property Name="definition" Type="varbinary(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Teachers">
+    <Key>
+      <PropertyRef Name="IdTeacher" />
+    </Key>
+    <Property Name="IdTeacher" Type="int" Nullable="false" />
+    <Property Name="EntryTime" Type="datetime" Nullable="false" />
+    <Property Name="ExitTime" Type="datetime" Nullable="false" />
+    <Property Name="Active" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Degree" Type="varchar" Nullable="true" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="User1Set">
+    <Key>
+      <PropertyRef Name="IdUser" />
+    </Key>
+    <Property Name="IdUser" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" Nullable="true" MaxLength="120" />
+    <Property Name="LastName" Type="varchar" Nullable="true" MaxLength="120" />
+    <Property Name="Email" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PasswordUser" Type="varchar" Nullable="false" MaxLength="40" />
+    <Property Name="IDNP" Type="bigint" Nullable="true" />
+    <Property Name="Photo" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="DateCreated" Type="datetime" Nullable="false" />
+    <Property Name="BirthDate" Type="datetime" Nullable="true" />
+    <Property Name="Age" Type="int" Nullable="true" />
+    <Property Name="Gender" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="YearOfStudies">
+    <Key>
+      <PropertyRef Name="IdYear" />
+    </Key>
+    <Property Name="IdYear" Type="int" Nullable="false" />
+    <Property Name="Semester1" Type="datetime" Nullable="false" />
+    <Property Name="Semester2" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NewUsers">
+    <Key>
+      <PropertyRef Name="IdUser" />
+      <PropertyRef Name="Email" />
+    </Key>
+    <Property Name="IdUser" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" Nullable="true" MaxLength="120" />
+    <Property Name="LastName" Type="varchar" Nullable="true" MaxLength="120" />
+    <Property Name="Email" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="IDNP" Type="bigint" Nullable="true" />
+    <Property Name="BirthDate" Type="datetime" Nullable="true" />
+    <Property Name="Age" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Addresses">
+    <Key>
+      <PropertyRef Name="AddressId" />
+    </Key>
+    <Property Name="AddressId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Village" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="City" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Country" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Cours">
+    <Key>
+      <PropertyRef Name="CoursId" />
+    </Key>
+    <Property Name="CoursId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameCourse" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="GroupId" Type="int" Nullable="false" />
+    <Property Name="DateCreateCourse" Type="datetime" Nullable="false" />
+    <Property Name="TeacherId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Event1Set">
+    <Key>
+      <PropertyRef Name="EventId" />
+    </Key>
+    <Property Name="EventId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EventName" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EventsStudents">
+    <Key>
+      <PropertyRef Name="EventId" />
+      <PropertyRef Name="StudentId" />
+    </Key>
+    <Property Name="EventId" Type="int" Nullable="false" />
+    <Property Name="StudentId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Group1Set">
+    <Key>
+      <PropertyRef Name="GroupId" />
+    </Key>
+    <Property Name="GroupId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AcademicYear" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Mark1Set">
+    <Key>
+      <PropertyRef Name="MarkId" />
+    </Key>
+    <Property Name="MarkId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CoursId" Type="int" Nullable="false" />
+    <Property Name="StudentId" Type="int" Nullable="false" />
+    <Property Name="Value" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Student1Set">
+    <Key>
+      <PropertyRef Name="StudentId" />
+    </Key>
+    <Property Name="StudentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EntryTime" Type="datetime" Nullable="false" />
+    <Property Name="ExitTime" Type="datetime" Nullable="false" />
+    <Property Name="Active" Type="nvarchar" Nullable="false" MaxLength="3" />
+    <Property Name="Class" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="GroupId" Type="int" Nullable="false" />
+    <Property Name="YearOfStudyId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Teacher1Set">
+    <Key>
+      <PropertyRef Name="TeacherId" />
+    </Key>
+    <Property Name="TeacherId" Type="int" Nullable="false" />
+    <Property Name="EntryTime" Type="datetime" Nullable="false" />
+    <Property Name="ExitTime" Type="datetime" Nullable="false" />
+    <Property Name="Active" Type="nvarchar" Nullable="false" MaxLength="3" />
+    <Property Name="Degree" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="User2Set">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="LastName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="PasswordUser" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="IDNP" Type="bigint" Nullable="false" />
+    <Property Name="Photo" Type="nvarchar" Nullable="true" MaxLength="400" />
+    <Property Name="DateCreated" Type="datetime" Nullable="true" />
+    <Property Name="BirthDate" Type="datetime" Nullable="true" />
+    <Property Name="Age" Type="int" Nullable="true" />
+    <Property Name="Gender" Type="nvarchar" Nullable="false" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="YearOfStudy1Set">
+    <Key>
+      <PropertyRef Name="YearOfStudyId" />
+    </Key>
+    <Property Name="YearOfStudyId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BegginingYear" Type="datetime" Nullable="false" />
+    <Property Name="EndYear" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Subscribes">
+    <Key>
+      <PropertyRef Name="Events_IdEvent" />
+      <PropertyRef Name="Students_IdStudent" />
+    </Key>
+    <Property Name="Events_IdEvent" Type="int" Nullable="false" />
+    <Property Name="Students_IdStudent" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="StudentEvents">
+    <Key>
+      <PropertyRef Name="Events_EventId" />
+      <PropertyRef Name="Students_StudentId" />
+    </Key>
+    <Property Name="Events_EventId" Type="int" Nullable="false" />
+    <Property Name="Students_StudentId" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Adress_Users">
+    <End Role="User1" Type="Model1.Store.User1Set" Multiplicity="1" />
+    <End Role="Adress" Type="Model1.Store.Adresses" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User1">
+        <PropertyRef Name="IdUser" />
+      </Principal>
+      <Dependent Role="Adress">
+        <PropertyRef Name="IdUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__StudentCo__IdStu__51EF2864">
+    <End Role="Cours" Type="Model1.Store.Courses" Multiplicity="1" />
+    <End Role="Mark" Type="Model1.Store.Marks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cours">
+        <PropertyRef Name="IdCourse" />
+      </Principal>
+      <Dependent Role="Mark">
+        <PropertyRef Name="IdStudent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Courses_Group">
+    <End Role="Group" Type="Model1.Store.Groups" Multiplicity="1" />
+    <End Role="Cours" Type="Model1.Store.Courses" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Group">
+        <PropertyRef Name="GroupId" />
+      </Principal>
+      <Dependent Role="Cours">
+        <PropertyRef Name="GroupId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Courses_Teachers">
+    <End Role="Teacher" Type="Model1.Store.Teachers" Multiplicity="0..1" />
+    <End Role="Cours" Type="Model1.Store.Courses" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="IdTeacher" />
+      </Principal>
+      <Dependent Role="Cours">
+        <PropertyRef Name="MainTeacher" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Eveniments_Users">
+    <End Role="User1" Type="Model1.Store.User1Set" Multiplicity="1" />
+    <End Role="Event" Type="Model1.Store.Events" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User1">
+        <PropertyRef Name="IdUser" />
+      </Principal>
+      <Dependent Role="Event">
+        <PropertyRef Name="Createby" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Students_Groups">
+    <End Role="Group" Type="Model1.Store.Groups" Multiplicity="1" />
+    <End Role="Student" Type="Model1.Store.Students" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Group">
+        <PropertyRef Name="GroupId" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="GroupId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__StudentCo__IdStu__52E34C9D">
+    <End Role="Student" Type="Model1.Store.Students" Multiplicity="1" />
+    <End Role="Mark" Type="Model1.Store.Marks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="IdStudent" />
+      </Principal>
+      <Dependent Role="Mark">
+        <PropertyRef Name="IdStudent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Students_Users">
+    <End Role="User1" Type="Model1.Store.User1Set" Multiplicity="1" />
+    <End Role="Student" Type="Model1.Store.Students" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User1">
+        <PropertyRef Name="IdUser" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="IdUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Students_YearOfStudy">
+    <End Role="YearOfStudy" Type="Model1.Store.YearOfStudies" Multiplicity="1" />
+    <End Role="Student" Type="Model1.Store.Students" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="YearOfStudy">
+        <PropertyRef Name="IdYear" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="IdYear" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Addresses_dbo_Users_UserId">
+    <End Role="User2" Type="Model1.Store.User2Set" Multiplicity="1" />
+    <End Role="Address" Type="Model1.Store.Addresses" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User2">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Address">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Cours_dbo_Groups_GroupId">
+    <End Role="Group1" Type="Model1.Store.Group1Set" Multiplicity="1" />
+    <End Role="Cour" Type="Model1.Store.Cours" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Group1">
+        <PropertyRef Name="GroupId" />
+      </Principal>
+      <Dependent Role="Cour">
+        <PropertyRef Name="GroupId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Cours_dbo_Teachers_TeacherId">
+    <End Role="Teacher1" Type="Model1.Store.Teacher1Set" Multiplicity="1" />
+    <End Role="Cour" Type="Model1.Store.Cours" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher1">
+        <PropertyRef Name="TeacherId" />
+      </Principal>
+      <Dependent Role="Cour">
+        <PropertyRef Name="TeacherId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Marks_dbo_Cours_CoursId">
+    <End Role="Cour" Type="Model1.Store.Cours" Multiplicity="1" />
+    <End Role="Mark1" Type="Model1.Store.Mark1Set" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cour">
+        <PropertyRef Name="CoursId" />
+      </Principal>
+      <Dependent Role="Mark1">
+        <PropertyRef Name="CoursId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Events_dbo_Users_UserId">
+    <End Role="User2" Type="Model1.Store.User2Set" Multiplicity="1" />
+    <End Role="Event1" Type="Model1.Store.Event1Set" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User2">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Event1">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_EventsStudents_dbo_Events_StudentId">
+    <End Role="Event1" Type="Model1.Store.Event1Set" Multiplicity="1" />
+    <End Role="EventsStudent" Type="Model1.Store.EventsStudents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Event1">
+        <PropertyRef Name="EventId" />
+      </Principal>
+      <Dependent Role="EventsStudent">
+        <PropertyRef Name="StudentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_EventsStudents_dbo_Students_StudentId">
+    <End Role="Student1" Type="Model1.Store.Student1Set" Multiplicity="1" />
+    <End Role="EventsStudent" Type="Model1.Store.EventsStudents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student1">
+        <PropertyRef Name="StudentId" />
+      </Principal>
+      <Dependent Role="EventsStudent">
+        <PropertyRef Name="StudentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Students_dbo_Groups_GroupId">
+    <End Role="Group1" Type="Model1.Store.Group1Set" Multiplicity="1" />
+    <End Role="Student1" Type="Model1.Store.Student1Set" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Group1">
+        <PropertyRef Name="GroupId" />
+      </Principal>
+      <Dependent Role="Student1">
+        <PropertyRef Name="GroupId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Marks_dbo_Students_StudentId">
+    <End Role="Student1" Type="Model1.Store.Student1Set" Multiplicity="1" />
+    <End Role="Mark1" Type="Model1.Store.Mark1Set" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student1">
+        <PropertyRef Name="StudentId" />
+      </Principal>
+      <Dependent Role="Mark1">
+        <PropertyRef Name="StudentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Students_dbo_Users_UserId">
+    <End Role="User2" Type="Model1.Store.User2Set" Multiplicity="1" />
+    <End Role="Student1" Type="Model1.Store.Student1Set" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User2">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Student1">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Students_YearOfStudies">
+    <End Role="YearOfStudy1" Type="Model1.Store.YearOfStudy1Set" Multiplicity="1" />
+    <End Role="Student1" Type="Model1.Store.Student1Set" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="YearOfStudy1">
+        <PropertyRef Name="YearOfStudyId" />
+      </Principal>
+      <Dependent Role="Student1">
+        <PropertyRef Name="YearOfStudyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Subscribes_Event">
+    <End Role="Event" Type="Model1.Store.Events" Multiplicity="1" />
+    <End Role="Subscribes" Type="Model1.Store.Subscribes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Event">
+        <PropertyRef Name="IdEvent" />
+      </Principal>
+      <Dependent Role="Subscribes">
+        <PropertyRef Name="Events_IdEvent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Subscribes_Student">
+    <End Role="Subscribes" Type="Model1.Store.Subscribes" Multiplicity="*" />
+    <End Role="Student" Type="Model1.Store.Students" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="IdStudent" />
+      </Principal>
+      <Dependent Role="Subscribes">
+        <PropertyRef Name="Students_IdStudent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StudentEvents_Event1">
+    <End Role="Event1" Type="Model1.Store.Event1Set" Multiplicity="1" />
+    <End Role="StudentEvents" Type="Model1.Store.StudentEvents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Event1">
+        <PropertyRef Name="EventId" />
+      </Principal>
+      <Dependent Role="StudentEvents">
+        <PropertyRef Name="Events_EventId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StudentEvents_Student1">
+    <End Role="StudentEvents" Type="Model1.Store.StudentEvents" Multiplicity="*" />
+    <End Role="Student1" Type="Model1.Store.Student1Set" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Student1">
+        <PropertyRef Name="StudentId" />
+      </Principal>
+      <Dependent Role="StudentEvents">
+        <PropertyRef Name="Students_StudentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,37 +1,37 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace CodeFirst
 {
-    class Repository<T> where T:class
+    class Repository<T> where T : class
     {
+        private readonly MoodleContext moodleContext;
+
+        public Repository(MoodleContext moodleContext)
+        {
+            this.moodleContext = moodleContext;
+        }  
         public void Add(T entity)
         {
-            using (var dbContext = new MoodleContext())
-            {
-                dbContext.Set<T>().Add(entity);
-                dbContext.SaveChanges();
-            }
+
+            moodleContext.Set<T>().Add(entity);
         }
         public void Update(T entity)
         {
-            using (var dbContext = new MoodleContext())
-            {
-                dbContext.Entry(entity).State = EntityState.Modified;
-                dbContext.SaveChanges();
-            }
+            moodleContext.Entry(entity).State = EntityState.Modified;
         }
         public void Delete(T entity)
         {
-            using (var dbContext = new MoodleContext())
-            {
-                dbContext.Entry(entity).State = EntityState.Deleted;
-                dbContext.SaveChanges();
-            }
+            moodleContext.Entry(entity).State = EntityState.Deleted;
+        }
+        public void Save()
+        {
+            moodleContext.SaveChanges();
         }
     }
 }

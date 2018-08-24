@@ -10,3 +10,5 @@ C:\Users\vadim.salajan\source\repos\Database\CodeFirst\obj\Debug\CodeFirst.cspro
 C:\Users\vadim.salajan\source\repos\Database\CodeFirst\obj\Debug\CodeFirst.exe
 C:\Users\vadim.salajan\source\repos\Database\CodeFirst\obj\Debug\CodeFirst.pdb
 C:\Users\vadim.salajan\source\repos\Database\CodeFirst\obj\Debug\CodeFirst.csprojAssemblyReference.cache
+C:\Users\vadim.salajan\source\repos\Database\CodeFirst\obj\Debug\CodeFirst.Migrations.m3.resources
+C:\Users\vadim.salajan\source\repos\Database\CodeFirst\obj\Debug\CodeFirst.csproj.GenerateResource.cache

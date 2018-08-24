@@ -49,32 +49,45 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CoursConfig.cs" />
-    <Compile Include="EventConfig.cs" />
-    <Compile Include="GroupConfig.cs" />
-    <Compile Include="Address.cs" />
-    <Compile Include="AddressConfig.cs" />
-    <Compile Include="Cours.cs" />
-    <Compile Include="Event.cs" />
-    <Compile Include="Group.cs" />
-    <Compile Include="Mark.cs" />
-    <Compile Include="MarkConfig.cs" />
-    <Compile Include="MoodleContext.cs" />
+    <Compile Include="Configurations\CoursConfig.cs" />
+    <Compile Include="Configurations\EventConfig.cs" />
+    <Compile Include="Domain\EventsStudent.cs" />
+    <Compile Include="Configurations\EventsStudentConfig.cs" />
+    <Compile Include="Configurations\GroupConfig.cs" />
+    <Compile Include="Domain\Address.cs" />
+    <Compile Include="Configurations\AddressConfig.cs" />
+    <Compile Include="Domain\Cours.cs" />
+    <Compile Include="Domain\Event.cs" />
+    <Compile Include="Domain\Group.cs" />
+    <Compile Include="Domain\Mark.cs" />
+    <Compile Include="Configurations\MarkConfig.cs" />
+    <Compile Include="LinqPginationExtension.cs" />
+    <Compile Include="Migrations\201808241143590_m3.cs" />
+    <Compile Include="Migrations\201808241143590_m3.Designer.cs">
+      <DependentUpon>201808241143590_m3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Domain\MoodleContext.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository.cs" />
-    <Compile Include="Student.cs" />
-    <Compile Include="StudentConfig.cs" />
-    <Compile Include="Teacher.cs" />
-    <Compile Include="TeacherConfig.cs" />
-    <Compile Include="User.cs" />
-    <Compile Include="UserConfig.cs" />
-    <Compile Include="YearOfStudy.cs" />
-    <Compile Include="YearOfStudyConfig.cs" />
+    <Compile Include="Domain\Student.cs" />
+    <Compile Include="Configurations\StudentConfig.cs" />
+    <Compile Include="Domain\Teacher.cs" />
+    <Compile Include="Configurations\TeacherConfig.cs" />
+    <Compile Include="Domain\User.cs" />
+    <Compile Include="Configurations\UserConfig.cs" />
+    <Compile Include="Domain\YearOfStudy.cs" />
+    <Compile Include="Configurations\YearOfStudyConfig.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201808241143590_m3.resx">
+      <DependentUpon>201808241143590_m3.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

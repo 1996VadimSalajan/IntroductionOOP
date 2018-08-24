@@ -17,17 +17,17 @@ namespace Database
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Teacher()
         {
-            this.Courses = new HashSet<Cours>();
+            this.Cours = new HashSet<Cour>();
         }
     
-        public int IdTeacher { get; set; }
+        public int TeacherId { get; set; }
         public System.DateTime EntryTime { get; set; }
         public System.DateTime ExitTime { get; set; }
         public string Active { get; set; }
         public string Degree { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Cours> Courses { get; set; }
+        public virtual ICollection<Cour> Cours { get; set; }
         public virtual User User { get; set; }
     }
 }

@@ -20,9 +20,9 @@ namespace Database
             this.Students = new HashSet<Student>();
         }
     
-        public int IdYear { get; set; }
-        public System.DateTime Semester1 { get; set; }
-        public System.DateTime Semester2 { get; set; }
+        public int YearOfStudyId { get; set; }
+        public System.DateTime BegginingYear { get; set; }
+        public System.DateTime EndYear { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Student> Students { get; set; }
