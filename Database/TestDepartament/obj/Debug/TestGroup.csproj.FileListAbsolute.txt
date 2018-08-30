@@ -1,4 +1,0 @@
-C:\Users\vadim.salajan\source\repos\Database\TestDepartament\obj\Debug\TestGroup.csprojAssemblyReference.cache
-C:\Users\vadim.salajan\source\repos\Database\TestDepartament\obj\Debug\TestGroup.csproj.CoreCompileInputs.cache
-C:\Users\vadim.salajan\source\repos\Database\TestDepartament\obj\Debug\TestDepartament.dll
-C:\Users\vadim.salajan\source\repos\Database\TestDepartament\obj\Debug\TestDepartament.pdb
