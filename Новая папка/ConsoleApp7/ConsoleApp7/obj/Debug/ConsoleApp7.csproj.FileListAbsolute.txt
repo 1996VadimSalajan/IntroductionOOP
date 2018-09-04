@@ -1,7 +1,0 @@
-C:\Users\vadim.salajan\source\repos\ConsoleApp7\ConsoleApp7\bin\Debug\ConsoleApp7.exe.config
-C:\Users\vadim.salajan\source\repos\ConsoleApp7\ConsoleApp7\bin\Debug\ConsoleApp7.exe
-C:\Users\vadim.salajan\source\repos\ConsoleApp7\ConsoleApp7\bin\Debug\ConsoleApp7.pdb
-C:\Users\vadim.salajan\source\repos\ConsoleApp7\ConsoleApp7\obj\Debug\ConsoleApp7.csprojAssemblyReference.cache
-C:\Users\vadim.salajan\source\repos\ConsoleApp7\ConsoleApp7\obj\Debug\ConsoleApp7.csproj.CoreCompileInputs.cache
-C:\Users\vadim.salajan\source\repos\ConsoleApp7\ConsoleApp7\obj\Debug\ConsoleApp7.exe
-C:\Users\vadim.salajan\source\repos\ConsoleApp7\ConsoleApp7\obj\Debug\ConsoleApp7.pdb

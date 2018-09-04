@@ -1,7 +1,0 @@
-C:\Users\vadim.salajan\source\repos\ConsoleApp10\Delegate\bin\Debug\Delegate.exe.config
-C:\Users\vadim.salajan\source\repos\ConsoleApp10\Delegate\bin\Debug\Delegate.exe
-C:\Users\vadim.salajan\source\repos\ConsoleApp10\Delegate\bin\Debug\Delegate.pdb
-C:\Users\vadim.salajan\source\repos\ConsoleApp10\Delegate\obj\Debug\Delegate.csprojAssemblyReference.cache
-C:\Users\vadim.salajan\source\repos\ConsoleApp10\Delegate\obj\Debug\Delegate.csproj.CoreCompileInputs.cache
-C:\Users\vadim.salajan\source\repos\ConsoleApp10\Delegate\obj\Debug\Delegate.exe
-C:\Users\vadim.salajan\source\repos\ConsoleApp10\Delegate\obj\Debug\Delegate.pdb

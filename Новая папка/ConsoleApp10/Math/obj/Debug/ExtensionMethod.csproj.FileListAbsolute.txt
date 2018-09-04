@@ -1,6 +1,0 @@
-C:\Users\vadim.salajan\source\repos\ConsoleApp10\Math\bin\Debug\Math.exe.config
-C:\Users\vadim.salajan\source\repos\ConsoleApp10\Math\bin\Debug\Math.exe
-C:\Users\vadim.salajan\source\repos\ConsoleApp10\Math\bin\Debug\Math.pdb
-C:\Users\vadim.salajan\source\repos\ConsoleApp10\Math\obj\Debug\ExtensionMethod.csproj.CoreCompileInputs.cache
-C:\Users\vadim.salajan\source\repos\ConsoleApp10\Math\obj\Debug\Math.exe
-C:\Users\vadim.salajan\source\repos\ConsoleApp10\Math\obj\Debug\Math.pdb

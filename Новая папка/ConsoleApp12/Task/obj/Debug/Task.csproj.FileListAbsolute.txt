@@ -1,7 +1,0 @@
-C:\Users\vadim.salajan\source\repos\ConsoleApp12\Task\obj\Debug\Task.csproj.CoreCompileInputs.cache
-C:\Users\vadim.salajan\source\repos\ConsoleApp12\Task\bin\Debug\Task.exe.config
-C:\Users\vadim.salajan\source\repos\ConsoleApp12\Task\bin\Debug\Task.exe
-C:\Users\vadim.salajan\source\repos\ConsoleApp12\Task\bin\Debug\Task.pdb
-C:\Users\vadim.salajan\source\repos\ConsoleApp12\Task\obj\Debug\Task.exe
-C:\Users\vadim.salajan\source\repos\ConsoleApp12\Task\obj\Debug\Task.pdb
-C:\Users\vadim.salajan\source\repos\ConsoleApp12\Task\obj\Debug\Task.csprojAssemblyReference.cache
