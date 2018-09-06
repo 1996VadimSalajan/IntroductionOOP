@@ -14,8 +14,7 @@ namespace CodeFirst
     {
         public UserConfig()
         {
-            Property(x => x.Gender)
-               .HasMaxLength(1);
+           
             HasRequired(x => x.Teacher)
                 .WithRequiredPrincipal(x => x.User);
             HasMany(x => x.Students)

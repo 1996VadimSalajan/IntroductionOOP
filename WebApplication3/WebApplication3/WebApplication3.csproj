@@ -220,6 +220,7 @@
     <Compile Include="Models\Domain\IdentityModels.cs" />
     <Compile Include="Models\Domain\ManageViewModels.cs" />
     <Compile Include="Models\Domain\Mark.cs" />
+    <Compile Include="Models\Domain\Repository.cs" />
     <Compile Include="Models\Domain\Student.cs" />
     <Compile Include="Models\Domain\Teacher.cs" />
     <Compile Include="Models\Domain\User.cs" />
@@ -297,6 +298,8 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Account\Profile.cshtml" />
+    <Content Include="Views\Manage\AddPhoto.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

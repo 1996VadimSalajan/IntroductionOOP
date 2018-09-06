@@ -196,4 +196,228 @@ form button[type=submit] {
     position:relative;
 }
 
+#example {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.dash-head {
+    position:center;
+    margin:auto;
+    width: 970px;
+    height: 80px;
+    background: url(moodle.png) no-repeat 50% 50% coral;
+}
+
+.panel-wrap {
+    position:center;
+    margin:auto;
+    width: 968px;
+    background-color: aliceblue;
+    border: 1px solid #e5e5e5;
+}
+
+#sidebar {
+    display: table-cell;
+    margin: 0;
+    padding: 20px 0 20px 20px;
+    width: 220px;
+    vertical-align: top;
+}
+
+#main-content {
+    display: table-cell;
+    margin: 0;
+    padding: 20px;
+    width: 680px;
+    vertical-align: top;
+}
+
+.widget.placeholder {
+    opacity: 0.4;
+    border: 1px dashed #a6a6a6;
+}
+
+.widget {
+    margin:auto;
+    padding: 0;
+    background-color: #ffffff;
+    border: 1px solid #e7e7e7;
+    border-radius: 3px;
+ 
+}
+
+    .widget:hover {
+        background-color: #fcfcfc;
+        border-color: #cccccc;
+    }
+
+    .widget div {
+        padding: 10px;
+        min-height: 50px;
+    }
+
+    .widget h3 {
+        position:center;
+        text-emphasis-position:right;
+        color:coral;
+        margin:auto;
+        font-size: 16px;
+        padding: 8px 10px;
+        text-align:center;
+        border-bottom: 3px solid #e7e7e7;
+    }
+
+        .widget h3 span {
+            float: left;
+        }
+
+            .widget h3 span:hover {
+                cursor: pointer;
+                background-color: #e7e7e7;
+                border-radius: 20px;
+            }
+
+/* PROFILE */
+#profile-photo {
+    width: 180px;
+    height: 180px;
+    margin:auto;
+    border-radius: 100px;
+    border: 1px solid #e7e7e7;
+    background:no-repeat;
+    background-size:180px 180px;
+}
+
+#profile div {
+    text-align: center;
+}
+
+#profile h4 {
+    width: auto;
+    margin: 0 0 5px;
+    font-size: 1.2em;
+    color: #1f97f7;
+}
+
+#profile p {
+    margin: 0 0 10px;
+}
+
+/* BLOGS & NEWS */
+#blogs div,
+#news div {
+    padding: 0 20px 20px;
+}
+
+#teammates h4,
+#blogs h4,
+#news h4 {
+    width: auto;
+    margin: 20px 0 2px;
+    font-size: 1.4em;
+    color: #1f97f7;
+    font-weight: normal;
+}
+
+.blog-info {
+    margin: 0 0 10px;
+    font-size: .9em;
+    color: #787878;
+}
+
+#sidebar #blogs h4 {
+    font-size: 1em;
+}
+
+#sidebar #blogs p {
+    display: none;
+}
+
+#sidebar #blogs .blog-info {
+    display: block;
+}
+
+#main-content #news h4 {
+    font-size: 1.2em;
+    line-height: 1.4em;
+    height: 40px;
+}
+
+    #main-content #news h4 span {
+        display: block;
+        float: left;
+        width: 100px;
+        height: 40px;
+        color: #000;
+    }
+
+#sidebar #news h4 {
+    font-size: 1em;
+}
+
+    #sidebar #news h4 span {
+        display: block;
+        margin-bottom: 3px;
+        color: #000;
+    }
+
+/* TEAMMATES */
+.team-mate:after {
+    content: ".";
+    display: block;
+    height: 0;
+    line-height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+#teammates .team-mate h4 {
+    font-size: 1.4em;
+    font-weight: normal;
+    margin-top: 12px;
+}
+
+.team-mate p {
+    margin: 0;
+}
+
+.team-mate img {
+    float: left;
+    margin: 0 15px 0 0;
+    border: 1px solid #e7e7e7;
+    border-radius: 60px;
+}
+
+.hint {
+    width: 250px;
+    height: 100px;
+    overflow: hidden;
+}
+
+    .hint > h3 {
+        padding-left: 20px;
+    }
+.vertical-menu {
+    width: 200px;
+}
+
+    .vertical-menu a {
+        background-color: #eee;
+        color: black;
+        display: block;
+        padding: 12px;
+        text-decoration:dashed;
+    }
+
+        .vertical-menu a:hover {
+            background-color: #ccc;
+        }
+
+        .vertical-menu a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
 
