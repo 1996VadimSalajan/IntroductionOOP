@@ -2,7 +2,6 @@
 @{
     ViewBag.Title = "Manage";
 }
-
 <div class="dash-head"></div>
 <div class="panel-wrap">
     <div id="sidebar">
@@ -11,20 +10,44 @@
             <div>
                 <div class="profile-photo"></div>
                 <img id="profile-photo" src="@Url.Action("Photo", "Home" )" height="48" width="48" />
-                <h4>Lynda Schleifer</h4>
+                <h4> User.Identity.GetUserName()</h4>
                 <p>Sales Associate</p>
             </div>
         </div>
         <div id="profile" class="widget">
-            <h3>@Html.ActionLink("MyCourse", "Profile", "Account", routeValues: null, htmlAttributes: new { title = "Profile" }) <span class="collapse k-icon k-i-arrowhead-n"></span></h3>
+            <h3>@Html.ActionLink("MyCourse", "Profile", "UserProfile", routeValues: null, htmlAttributes: new { title = "Profile" }) <span class="collapse k-icon k-i-arrowhead-n"></span></h3>
 
         </div>
         <div id="profile" class="widget">
-            <h3>@Html.ActionLink("Settings", "Profile", "Account", routeValues: null, htmlAttributes: new { title = "Profile" }) <span class="collapse k-icon k-i-arrowhead-n"></span></h3>
+            <h3>@Html.ActionLink("Settings", "Profile", "UserProfile", routeValues: null, htmlAttributes: new { title = "Profile" }) <span class="collapse k-icon k-i-arrowhead-n"></span></h3>
 
         </div>
     </div>
-  
+    <div id="main-content">
+        <div id="blogs" class="widget">
+            <h3>Blogs <span class="collapse k-icon k-i-arrowhead-n"></span></h3>
+            <div>
+                <table class="table">
+                    <tr>
+                        <th>Id</th>
+                        <th>Url</th>
+                    </tr>
+
+                    @foreach (var item in ApplicationIdentity)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ProviderKey)
+                            </td>
+                        </tr>
+                    }
+                </table>
+            </div>
+        </div>
+    </div>
 </div>
-<div class="responsive-message"></div>
+    <div class="responsive-message"></div>
 

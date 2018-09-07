@@ -307,16 +307,16 @@ form button[type=submit] {
 }
 
 /* BLOGS & NEWS */
-#blogs div,
-#news div {
-    padding: 0 20px 20px;
+#blogs {
+    margin:auto;
+    position:center;
 }
 
-#teammates h4,
-#blogs h4,
-#news h4 {
+
+#blogs h4
+ {
     width: auto;
-    margin: 20px 0 2px;
+    margin-left:400px;
     font-size: 1.4em;
     color: #1f97f7;
     font-weight: normal;

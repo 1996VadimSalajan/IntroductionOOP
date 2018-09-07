@@ -49,7 +49,7 @@ namespace WebApplication3.Controllers
                 _userManager = value;
             }
         }
-
+        
         //
         // GET: /Manage/Index
         public async Task<ActionResult> Index(ManageMessageId? message)

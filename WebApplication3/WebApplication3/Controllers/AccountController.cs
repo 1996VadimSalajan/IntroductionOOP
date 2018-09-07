@@ -47,9 +47,6 @@ namespace WebApplication3.Controllers
                 _signInManager = value;
             }
         }
-
-       
-
         public ApplicationUserManager UserManager
         {
             get
@@ -105,7 +102,6 @@ namespace WebApplication3.Controllers
                     return View(model);
             }
         }
-
         //
         // GET: /Account/VerifyCode
         [AllowAnonymous]
@@ -148,7 +144,7 @@ namespace WebApplication3.Controllers
                     return View(model);
             }
         }
-
+       
         //
         // GET: /Account/Register
         [AllowAnonymous]
@@ -198,46 +194,7 @@ namespace WebApplication3.Controllers
             // If we got this far, something failed, redisplay form
             return View(model);
         }
-        [AllowAnonymous]
-        public new ActionResult Profile()
-        {
-            return View();
-        }
-        //
-        // GET: /Account/ConfirmEmail
-        [HttpPost]
-        [AllowAnonymous]
-        [ValidateAntiForgeryToken]
-        public new  ActionResult Profile([Bind(Exclude = "Photo")]Profile model)
-        {
-            if (ModelState.IsValid)
-            {
-
-                // To convert the user uploaded Photo as Byte Array before save to DB 
-                byte[] imageData = null;
-                if (Request.Files.Count > 0)
-                {
-                    HttpPostedFileBase poImgFile = Request.Files["Photo"];
-
-                    using (var binary = new BinaryReader(poImgFile.InputStream))
-                    {
-                        imageData = binary.ReadBytes(poImgFile.ContentLength);
-                    }
-                }
-                var userid = User.Identity.GetUserId();
-              
-                var user = dbContext.Users.Where(u => u.Id ==userid).FirstOrDefault();
-                //Here we pass the byte array to user context to store in db 
-                user.Photo = imageData;
-                dbContext.Entry(user).State = System.Data.Entity.EntityState.Modified;
-                dbContext.SaveChanges();
-               
-               
-                return RedirectToAction("Index", "Manage");
-            }
-            // If we got this far, something failed, redisplay form 
-            return View(model);
-        }
+       
         [AllowAnonymous]
         public async Task<ActionResult> ConfirmEmail(string userId, string code)
         {
