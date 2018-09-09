@@ -1,0 +1,33 @@
+﻿@model IEnumerable<CodeFirst.User>
+@{
+    ViewBag.Title = "View";
+}
+    @foreach (var item in Model)
+    {
+<dl class="dl-horizontal">
+
+    
+    <dt>
+        @Html.DisplayNameFor(model => model.Email)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => item.Email)
+    </dd><div></div>
+    @if (@Html.DisplayFor(model => item.BirthDate) == null)
+    {
+    <dt>
+        @Html.DisplayNameFor(model => model.BirthDate)
+    </dt>
+    }
+    <dd>
+        @Html.DisplayFor(model => item.BirthDate)
+    </dd>
+    <div></div>
+    
+
+
+</dl>
+    }
+
+
