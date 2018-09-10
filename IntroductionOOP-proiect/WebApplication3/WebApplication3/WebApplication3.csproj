@@ -235,6 +235,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\im1.jpg" />
+    <Content Include="Content\im10.jpg" />
     <Content Include="Content\im2.jpeg" />
     <Content Include="Content\im3.jpeg" />
     <Content Include="Content\im4.jpeg" />
