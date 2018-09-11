@@ -1,0 +1,33 @@
+﻿@using PagedList.Mvc
+@model PagedList.IPagedList<CodeFirst.User>
+<table class="table">
+    <tr>
+        <th>
+            @Html.ActionLink("Username", "Index")
+        </th>
+        <th>
+            @Html.ActionLink("Email", "Index")
+        </th>
+        <th>
+          Option
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.ActionLink("Details","Details") 
+               
+            </td>
+        </tr>
+    }
+
+</table>
+@Html.PagedListPager(Model, page => Url.Action("Index", new { page }))

@@ -1,0 +1,196 @@
+﻿@model IEnumerable<CodeFirst.User>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Group Students</h2>
+
+
+<p>
+    Find by name: <input id="SearchString" name="SearchString" type="text" value="" />
+    <input type="button" value="Search" id="btnSearch" />
+</p>
+
+<div id="View">
+    @{Html.Partial("View", Model);}
+</div>
+
+<script>
+    $('#btnSearch').click(function () {
+        $('#btnSearch')
+            .html($.trim($(this).text()))
+            .effect('highlight', {}, 1000);
+    });</script>
+
+@section Scripts
+{
+
+
+    <script type="text/javascript">
+
+        // Adding popstate event listener to handle browser back button
+        window.addEventListener("popstate", function (e) {
+            $.ajax({
+                url: location.href,
+                success: function (result) {
+                    $('#View').html(result);
+                }
+            });
+        });
+
+        function ChangeUrl(page, url) {
+            if (typeof (history.pushState) != "undefined") {
+                var obj = { Page: page, Url: url };
+                history.pushState(null, obj.Page, obj.Url);
+            } else {
+                alert("Browser does not support HTML5.");
+            }
+        }
+
+        function getUrlVars() {
+            var vars = [], hash;
+            var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+            for (var i = 0; i < hashes.length; i++) {
+                hash = hashes[i].split('=');
+                vars.push(hash[0]);
+                vars[hash[0]] = hash[1];
+            }
+            return vars;
+        }
+
+        function search() {
+            $.ajax({
+                url: "/UserProfile/Index?searchString=" + $('#SearchString').val(),
+                success: function (result) {
+                    ChangeUrl("index", "/UserProfile/Index?searchString=" + $('#SearchString').val());
+                    $('#View').html(result);
+                }
+            });
+        }
+
+        $(function () {
+            $("#btnSearch").click(function () {
+                search();
+            });
+
+            $("#SearchString").keypress(function (e) {
+                if (e.keyCode == 13) {
+                    search();
+                }
+            });
+            $('body').on('click', '#View .pagination a', function (event) {
+                event.preventDefault();
+                console.log('page');
+                var searchString = $('#SearchString').val();
+                if (searchString == undefined || searchString == '') {
+                    searchString = '';
+                } else {
+                    searchString = '&searchString=' + searchString;
+                }
+                var url = $(this).attr('href') + searchString;
+                console.log(url);
+                $.ajax({
+                    url: url,
+                    success: function (result) {
+                        ChangeUrl('index', url);
+                        $('#View').html(result);
+                    }
+                });
+            });
+
+
+            $('body').on('click', '#View .table a', function (event) {
+
+                event.preventDefault();
+
+                var searchString = $('#SearchString').val();
+                if (searchString == undefined || searchString == '') {
+                    searchString = '';
+                } else {
+                    searchString = '&searchString=' + searchString;
+                }
+
+                var columnToSort = $(this).text();
+                var currentSortOption = getUrlVars()['sortOption'];
+                console.log(currentSortOption);
+                var sort;
+                switch (currentSortOption) {
+                    case "name_acs":
+                        sort = 'sortOption=name_desc';
+                        break;
+                    case "name_desc":
+                        sort = 'sortOption=name_acs';
+                        break;
+                    default:
+                        sort = '';
+                        break;
+                }
+
+
+                switch (columnToSort) {
+                    case 'Name':
+                        if (currentSortOption != 'name_acs' && currentSortOption != 'name_desc') {
+                            sort = 'sortOption=name_acs';
+                        }
+                        break;
+                    case 'Price':
+                        if (currentSortOption != 'price_acs' && currentSortOption != 'price_desc') {
+                            sort = 'sortOption=price_acs';
+                        }
+
+                    default:
+                        sort = '';
+                        break;
+
+                }
+                if (sort != '' & searchString != '') {
+                    sort = '&' + sort;
+                }
+                var url = '/UserProfile/Index?' + searchString + sort;
+                $.ajax({
+                    url: url,
+                    success: function (result) {
+                        ChangeUrl('index', url);
+                        $('#View').html(result);
+                    }
+                });
+            });
+
+        });
+
+    </script>
+
+
+}
+    <script type="text/javascript">
+        $(function () {
+            $("#dialog").dialog({
+                autoOpen: false,
+                modal: true,
+                title: "View Details"
+            });
+            $("#CustomerGrid .details").click(function () {
+                var id = $(this).closest("tr").find("td").eq(0).html();
+                $.ajax({
+                    type: "POST",
+                    url: "/UserProfile/Details",
+                    data: '{id: "' + id + '" }',
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "html",
+                    success: function (response) {
+                        $('#dialog').html(response);
+                        $('#dialog').dialog('open');
+                    },
+                    failure: function (response) {
+                        alert(response.responseText);
+                    },
+                    error: function (response) {
+                        alert(response.responseText);
+                    }
+                });
+            });
+        });
+    </script>
+
+
+
